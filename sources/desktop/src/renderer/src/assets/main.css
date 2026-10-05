@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+:root {
+  --font-sans: 'Be Vietnam Pro', sans-serif;
+
+  --bg-primary: #ffffff;
+
+  --text-primary: #041e49;
+
+  --bg-titlebar: #006aff;
+}
+
+@theme {
+  --font-sans: 'Be Vietnam Pro', sans-serif;
+
+  --color-bg-primary: var(--bg-primary);
+
+  --color-text-primary: var(--text-primary);
+
+  --color-bg-titlebar: var(--bg-titlebar);
+}
+
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag-region {
+  -webkit-app-region: no-drag;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

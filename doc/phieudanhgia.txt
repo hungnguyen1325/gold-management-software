@@ -1,0 +1,32 @@
+TRƯỜNG ĐẠI HỌC CÔNG NGHỆ ĐÔNG Á
+KHOA CÔNG NGHỆ THÔNG TIN
+CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+PHIẾU ĐÁNH GIÁ MỨC ĐỘ HOÀN THÀNH CÔNG VIỆC
+LÀM BÀI THI KẾT THÚC HỌC PHẦN
+I. THÔNG TIN CHUNG
+1. Tên học phần: KIỂM THỬ PHẦN MỀM ………………………………….……
+2. Tên lớp tín chỉ: Kiểm thử phần mềm-1-1-26(N03.THTT_IN_ELN.11) ………
+3. Nhóm…04., Danh sách sinh viên thực hiện
+TT
+Mã sinh viên
+Họ và tên SV
+Lớp hành chính
+Ghi chú
+20232139
+Nguyễn Thanh Hùng
+DCCNTT.14.6
+Trưởng nhóm
+II. ĐÁNH GIÁ
+TT
+Họ và tên SV
+Công việc được phân công
+Mức độ hoàn thành
+SV ký xác nhận
+Nguyễn Thanh Hùng
+Phân tích yêu cầu và nghiệp vụ của hệ thống.
+Thiết kế Test Case cho Unit, Integration và System Test.
+Thực thi kiểm thử, ghi nhận kết quả và báo cáo lỗi.
+Thực hiện Automation Test, hoàn thiện báo cáo và thuyết trình.
+100
+………………

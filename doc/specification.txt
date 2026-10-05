@@ -1,0 +1,1473 @@
+TRƯỜNG ĐẠI HỌC CÔNG NGHỆ ĐÔNG Á
+KHOA CÔNG NGHỆ THÔNG TIN
+BÀI TẬP LỚN
+HỌC PHẦN: KIỂM THỬ PHẦN MỀM
+MÃ ĐỀ THI: 25
+KIỂM THỬ PHẦN MỀM QUẢN LÝ HÀNG TRANG SỨC
+LỚP TÍN CHỈ: Kiểm thử phần mềm-1-1-26(N03.THTT_IN_ELN.11)
+Giảng viên hướng dẫn: Th.S Lê Tuấn Anh
+Danh sách sinh viên thực hiện: Nhóm 04
+TT
+Mã sinh viên
+Sinh viên thực hiện
+Lớp hành chính
+1
+20232139
+Nguyễn Thanh Hùng
+DCCNTT.14.6
+2
+3
+Bắc Ninh – 2026
+MỤC LỤC
+DANH MỤC HÌNH ẢNH5
+DANH MỤC BẢNG BIỂU6
+LỜI CẢM ƠN7
+LỜI MỞ ĐẦU8
+CHƯƠNG 1: TỔNG QUAN BÀI TOÁN10
+1.1.Giới thiệu đề tài10
+1.2.Đặc tả yêu cầu11
+1.2.1.Các luồng nghiệp vụ chính11
+b.Luồng khởi tạo và quản lý doanh nghiệp13
+c.Luồng quản lý chi nhánh, kho và hàng hóa14
+d.Luồng quản lý nhân viên và phân quyền16
+e.Luồng giao dịch bán hàng17
+f.Luồng giao dịch mua hàng hoặc mua lại vàng18
+g.Luồng báo cáo và thống kê19
+1.2.2.Các màn hình chức năng chính20
+1.2.3.Các module chính của chương trình38
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT46
+2.1.Tổng quan về kiểm thử phần mềm46
+2.1.1.Khái niệm kiểm thử phần mềm46
+2.1.2.Mục tiêu của kiểm thử phần mềm47
+2.1.3.Vai trò của kiểm thử trong phát triển phần mềm50
+2.2.Các mức độ kiểm thử phần mềm52
+2.2.1.Unit Testing52
+2.2.2.Integration Testing54
+2.2.3.System Testing56
+2.2.4.Acceptance Testing60
+2.3.Các kỹ thuật thiết kế Test Case63
+2.3.1.Phân vùng tương đương – Equivalence Partitioning64
+2.3.2.Phân tích giá trị biên – Boundary Value Analysis64
+2.3.3.Bảng quyết định – Decision Table Testing65
+2.3.4.Kiểm thử chuyển trạng thái – State Transition Testing65
+2.3.5.Statement Coverage / Branch Coverage66
+2.4.Kiểm thử hộp đen và kiểm thử hộp trắng67
+2.4.1.Kiểm thử hộp đen – Black-box Testing67
+2.4.2.Kiểm thử hộp trắng – White-box Testing68
+2.4.3.So sánh hai phương pháp68
+2.5.Kiểm thử thủ công và kiểm thử tự động69
+2.5.1.Manual Testing69
+2.5.2.Automation Testing69
+2.5.3.Ưu, nhược điểm của từng phương pháp70
+2.6.Một số công cụ sử dụng trong kiểm thử70
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ TEST72
+3.1.Mục tiêu kiểm thử72
+3.2.Phạm vi kiểm thử72
+3.3.Dữ liệu kiểm thử74
+3.4.Ma trận truy vết yêu cầu và test case75
+3.5.Thiết kế Unit Test76
+3.6.Thiết kế Integration Test78
+3.7.Thiết kế System Test79
+3.8.Bộ test case chi tiết theo từng màn hình chức năng81
+3.9.Tiêu chí đánh giá Pass Fail86
+CHƯƠNG 4: THỰC THI TEST VÀ BÁO CÁO KẾT QUẢ TEST88
+4.1.Quy trình thực thi kiểm thử88
+4.2.Tổng hợp kết quả kiểm thử88
+4.3.Kết quả Unit Test89
+4.4.Kết quả Integration Test90
+4.5.Kết quả System Test91
+4.6.Danh sách lỗi ghi nhận92
+4.7.Nhật ký thực thi kiểm thử mẫu94
+4.8.Phân tích lỗi theo mức độ nghiêm trọng95
+CHƯƠNG 5: AUTOMATION TEST97
+5.1.Mục tiêu tự động hóa97
+5.2.Công cụ sử dụng97
+5.3.Kịch bản Automation Test97
+5.4.So sánh kiểm thử thủ công và tự động99
+5.5.Kết quả và nhận xét100
+5.6.Cấu trúc kịch bản kiểm thử tự động100
+5.7.Ví dụ kịch bản kiểm thử API101
+5.8.Kế hoạch chạy kiểm thử hồi quy102
+5.9.Rủi ro khi áp dụng Automation Test102
+CHƯƠNG 6: KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN103
+6.1.Kết quả đạt được103
+6.2.Hạn chế103
+6.3.Hướng phát triển103
+6.4.Kết luận104
+6.5.Bài học kinh nghiệm104
+6.6.Đề xuất hoàn thiện hệ thống104
+PHỤ LỤC106
+TÀI LIỆU THAM KHẢO107
+DANH MỤC HÌNH ẢNH
+Hình 1.1: Sơ đồ Activity Diagram luồng đăng nhập và xác định quyền truy cập13
+Hình 1.2: Sơ đồ luồng khởi tạo doanh nghiệp trên hệ thống14
+Hình 1.3: Sơ đồ luồng quản lý chi nhánh, kho và hàng hóa16
+Hình 1.4: Sơ đồ phân quyền người dùng trong hệ thống17
+Hình 1.5: Activity Diagram luồng giao dịch bán hàng18
+Hình 1.6: Activity Diagram luồng giao dịch mua vàng19
+Hình 1.7: Sơ đồ luồng tạo báo cáo doanh thu20
+Hình 1.8: Bản phác thảo giao diện đăng nhập20
+Hình 1.9: Phác thảo trang quản lý doanh nhiệp22
+Hình 1.10: Phác thảo giao diện quản lý chi nhánh25
+Hình 1.11: Phác thảo giao diện quản lý kho27
+Hình 1.12: Phác thảo giao diện nhân sự31
+Hình 1.13: Giao diện màn hình quản lý bảng giá vàng32
+Hình 1.14: Phác thảo giao dịch bán hàng, mua hàng34
+Hình 1.15: Phác thảo giao diện báo cáo sổ quỹ tiền mặt36
+Hình 2.16: Quy trình cơ bản của hoạt động kiểm thử phần mềm46
+Hình 2.17: Các mục tiêu chính của kiểm thử phần mềm48
+Hình 2.18: Vai trò của kiểm thử trong vòng đời phát triển phần mềm50
+Hình 2.19: Quy trình thực hiện Unit Testing53
+Hình 2.20: Quy trình System Testing trên hệ thống quản lý vàng bạc59
+DANH MỤC BẢNG BIỂU
+Bảng 3.1: Bảng phạm vi kiểm thử73
+Bảng 3.2: Bảng dữ liệu kiểm thử75
+Bảng 3.3: Bảng ma trận truy vết76
+Bảng 3.4: Bảng demo một số testcase cơ bản77
+Bảng 3.5: Bảng Integration test cơ bản79
+Bảng 3.6: Bảng System test cơ bản80
+Bảng 3.7: Bảng testcase tri tiết82
+Bảng 3.8: Bảng tiêu chí đánh giá87
+Bảng 4.9: Bảng quy trình thực thi88
+Bảng 4.10: Bảng tổng hợp kết quả88
+Bảng 4.11: Bảng kết quả uni test89
+Bảng 4.12: Bảng kết quả Integration Test90
+Bảng 4.13: Bảng kết quả System Test91
+Bảng 4.14: Bảng danh sách lỗi ghi nhận khi test92
+Bảng 4.15: Bảng nhật ký thực thi test94
+Bảng 4.16: Bảng phân tích mục độ nghiêm trọng95
+Bảng 5.17: Bảng công nghệ sử dụng97
+Bảng 5.18: Bảng kịch bản Automation Test97
+Bảng 5.19: Bảng so sánh kiểm thử thủ công và tự động99
+Bảng 5.20: Bảng cấu trúc kịch bản kiểm thử tự động100
+Bảng 5.21: Bảng kịch bản kiểm thử API101
+Bảng 5.22: Bảng kế hoạch chạy kiểm thử hồi quy101
+Bảng 6.23: Bảng đề xuất hoàn thiện hệ thống104
+LỜI CẢM ƠN
+Trong quá trình học tập và thực hiện bài tập lớn học phần Kiểm thử phần mềm, chúng em đã nhận được nhiều sự hướng dẫn và hỗ trợ quý báu từ thầy cô trong Khoa Công nghệ Thông tin, Trường Đại học Công nghệ Đông Á.
+Trước hết, chúng em xin gửi lời cảm ơn chân thành đến Th.S Lê Tuấn Anh, giảng viên phụ trách học phần, người đã trực tiếp giảng dạy và định hướng cho chúng em trong suốt quá trình học tập. Những kiến thức về quy trình kiểm thử, xây dựng test case, tổ chức thực thi kiểm thử và đánh giá kết quả đã giúp chúng em có nền tảng để tiếp cận đề tài một cách rõ ràng và có hệ thống.
+Thông qua bài tập lớn “Kiểm thử phần mềm quản lý hàng trang sức”, chúng em có cơ hội vận dụng những kiến thức đã học vào một bài toán gần với thực tế. Quá trình tìm hiểu nghiệp vụ, phân tích chức năng, xây dựng các trường hợp kiểm thử và đánh giá hoạt động của hệ thống đã giúp chúng em hiểu rõ hơn vai trò của kiểm thử trong quá trình phát triển phần mềm. Đây cũng là cơ hội để chúng em rèn luyện tư duy phân tích, khả năng phát hiện vấn đề và cách tiếp cận một hệ thống dưới góc nhìn của người kiểm thử.
+Chúng em cũng xin cảm ơn Khoa Công nghệ Thông tin và Trường Đại học Công nghệ Đông Á đã tạo môi trường học tập và điều kiện để chúng em có thể tiếp cận những kiến thức chuyên ngành cần thiết trong suốt quá trình học tập.
+Do thời gian thực hiện và kinh nghiệm thực tế còn hạn chế, bài báo cáo chắc chắn vẫn còn những điểm chưa hoàn thiện. Chúng em rất mong nhận được những nhận xét và góp ý từ thầy để có thể nhìn nhận rõ hơn những thiếu sót, đồng thời tiếp tục hoàn thiện kiến thức và kỹ năng của mình.
+Cuối cùng, chúng em xin kính chúc thầy Lê Tuấn Anh cùng các thầy cô trong Khoa Công nghệ Thông tin luôn mạnh khỏe, thành công và giữ vững nhiệt huyết trong công tác giảng dạy.
+Chúng em xin chân thành cảm ơn!
+LỜI MỞ ĐẦU
+Trong những năm gần đây, việc ứng dụng phần mềm vào quản lý hoạt động kinh doanh đã trở thành một phần quan trọng trong quá trình vận hành và mở rộng của các doanh nghiệp. Đối với lĩnh vực kinh doanh vàng bạc, trang sức, yêu cầu về độ chính xác trong quản lý hàng hóa, giá bán, giao dịch và doanh thu càng trở nên cần thiết do đặc thù giá trị tài sản lớn, dữ liệu thường xuyên biến động và phạm vi quản lý có thể trải rộng trên nhiều chi nhánh.
+Xuất phát từ thực tế đó, nhóm lựa chọn thực hiện đề tài “Kiểm thử phần mềm quản lý hàng trang sức” thuộc học phần Kiểm thử phần mềm. Hệ thống được xây dựng theo mô hình cho phép một công ty chủ quản cung cấp và triển khai phần mềm quản lý vàng bạc cho nhiều doanh nghiệp khác nhau. Mỗi doanh nghiệp có thể tổ chức hoạt động kinh doanh theo nhiều chi nhánh, đồng thời quản lý kho hàng, nhân viên, bảng giá vàng, giao dịch mua bán và các thông tin phục vụ công tác thống kê, báo cáo.
+Bên cạnh việc đáp ứng các nghiệp vụ kinh doanh, hệ thống còn phải bảo đảm tính tách biệt và an toàn của dữ liệu giữa các doanh nghiệp, giữa các chi nhánh cũng như giữa các nhóm người dùng. Vì vậy, cơ chế phân quyền giữ vai trò đặc biệt quan trọng, giúp xác định rõ phạm vi dữ liệu và chức năng mà từng người dùng được phép truy cập. Một sai sót nhỏ trong quá trình xử lý dữ liệu, tính toán giao dịch hoặc kiểm soát quyền truy cập có thể dẫn đến những ảnh hưởng trực tiếp tới hoạt động kinh doanh. Chính vì vậy, kiểm thử là một bước không thể thiếu để đánh giá tính đúng đắn và độ tin cậy của hệ thống trước khi đưa vào sử dụng thực tế.
+Trong phạm vi bài tập lớn, nhóm tập trung tìm hiểu các yêu cầu và luồng nghiệp vụ chính của hệ thống, từ đó xây dựng các trường hợp kiểm thử phù hợp cho từng mức độ kiểm thử. Các hoạt động được triển khai bao gồm Unit Test, Integration Test và System Test, kết hợp với các kỹ thuật thiết kế test case nhằm kiểm tra cả những trường hợp hoạt động thông thường và các tình huống có khả năng phát sinh lỗi. Nội dung này phù hợp với định hướng của đề bài, trong đó yêu cầu thực hiện kiểm thử ở nhiều cấp độ và đánh giá kết quả thực thi trên hệ thống.
+Bên cạnh kiểm thử thủ công, nhóm cũng nghiên cứu và áp dụng kiểm thử tự động đối với một số kịch bản phù hợp nhằm hỗ trợ quá trình kiểm thử được thực hiện nhanh chóng, nhất quán và có khả năng lặp lại. Qua đó, nhóm có thể so sánh giữa phương pháp kiểm thử thủ công và kiểm thử tự động, đồng thời đánh giá hiệu quả của từng phương pháp trong những tình huống cụ thể. Đây cũng là một nội dung được yêu cầu trong phần Automation Test của báo cáo.
+Thông qua quá trình thực hiện đề tài, nhóm mong muốn không chỉ hoàn thành việc đánh giá các chức năng của phần mềm quản lý vàng bạc, trang sức mà còn vận dụng được những kiến thức đã học vào một bài toán có tính thực tế. Qua đó, các thành viên có cơ hội củng cố tư duy kiểm thử, nâng cao khả năng phân tích yêu cầu, xây dựng test case, phát hiện lỗi và đánh giá chất lượng của một hệ thống phần mềm một cách có hệ thống.
+CHƯƠNG 1: TỔNG QUAN BÀI TOÁN
+Giới thiệu đề tài
+Trong hoạt động kinh doanh vàng bạc, trang sức, việc quản lý chính xác hàng hóa, giá bán, giao dịch và doanh thu có ý nghĩa đặc biệt quan trọng. Giá trị của từng sản phẩm thường cao, giá vàng có thể thay đổi theo thời điểm, trong khi hoạt động kinh doanh lại liên quan đến nhiều bộ phận như kho hàng, nhân viên bán hàng, quản lý chi nhánh và bộ phận điều hành. Khi quy mô doanh nghiệp mở rộng, đặc biệt trong trường hợp có nhiều chi nhánh, việc quản lý bằng các phương pháp thủ công hoặc những hệ thống rời rạc dễ dẫn đến sai lệch dữ liệu, khó kiểm soát hàng tồn kho và hạn chế khả năng theo dõi hoạt động kinh doanh một cách thống nhất.
+Xuất phát từ bài toán trên, nhóm lựa chọn đề tài “Kiểm thử phần mềm quản lý hàng trang sức”. Hệ thống được xây dựng theo mô hình một công ty chủ quản triển khai phần mềm quản lý vàng bạc cho nhiều doanh nghiệp khác nhau. Mỗi doanh nghiệp khi sử dụng hệ thống có không gian quản lý riêng và có thể tổ chức hoạt động kinh doanh theo nhiều chi nhánh. Tại từng doanh nghiệp, hệ thống hỗ trợ quản lý các nghiệp vụ liên quan đến chi nhánh, kho hàng, hàng hóa, nhân viên, bảng giá vàng, giao dịch mua bán và báo cáo doanh thu.
+Các yêu cầu của hệ thống được xác định dựa trên bài toán quản lý thực tế trong lĩnh vực kinh doanh vàng bạc, trang sức. Trong đó, một yêu cầu quan trọng là dữ liệu giữa các doanh nghiệp phải được tổ chức và quản lý độc lập. Người dùng thuộc doanh nghiệp này không được phép truy cập hoặc tác động đến dữ liệu của doanh nghiệp khác. Bên trong mỗi doanh nghiệp, phạm vi thao tác tiếp tục được giới hạn theo chi nhánh, chức vụ và quyền hạn của từng tài khoản.
+Hệ thống hướng đến nhiều nhóm người dùng với trách nhiệm khác nhau. Công ty chủ quản thực hiện quản lý các doanh nghiệp sử dụng phần mềm và các chức năng ở cấp hệ thống. Doanh nghiệp quản lý các chi nhánh trực thuộc và theo dõi toàn bộ hoạt động kinh doanh trong phạm vi của mình. Người quản lý chi nhánh chịu trách nhiệm kiểm soát hoạt động tại chi nhánh được giao, trong khi nhân viên chỉ được thực hiện những nghiệp vụ phù hợp với vị trí và quyền hạn đã được cấp. Cơ chế phân quyền này giúp giới hạn rõ phạm vi sử dụng của từng người dùng và góp phần bảo đảm tính an toàn, nhất quán của dữ liệu.
+Về nghiệp vụ, hệ thống cần đáp ứng quá trình quản lý xuyên suốt từ khi hàng hóa được đưa vào kho cho đến khi phát sinh giao dịch mua bán. Thông tin về sản phẩm, số lượng, trọng lượng, giá vàng và các dữ liệu liên quan cần được lưu trữ và cập nhật chính xác. Khi giao dịch phát sinh, hệ thống phải ghi nhận thông tin giao dịch, cập nhật tình trạng hàng hóa và cung cấp dữ liệu phục vụ việc thống kê, đối soát và lập báo cáo. Bên cạnh đó, bảng giá vàng cần được quản lý phù hợp để hỗ trợ quá trình xác định giá trong các nghiệp vụ kinh doanh.
+Thông qua việc xây dựng hệ thống, bài toán cần giải quyết không chỉ là số hóa các nghiệp vụ quản lý vàng bạc, trang sức, mà còn tạo ra một môi trường quản lý tập trung có khả năng phục vụ nhiều doanh nghiệp, nhiều chi nhánh và nhiều nhóm người dùng khác nhau. Hệ thống giúp giảm sự phụ thuộc vào quá trình quản lý thủ công, hạn chế sai sót trong ghi nhận dữ liệu, hỗ trợ kiểm soát hàng hóa và giao dịch, đồng thời cung cấp thông tin cần thiết cho người quản lý trong quá trình theo dõi và đánh giá hoạt động kinh doanh.
+Trong phạm vi học phần Kiểm thử phần mềm, hệ thống trên được lựa chọn làm đối tượng để phân tích và kiểm thử. Việc kiểm thử tập trung vào tính đúng đắn của các chức năng nghiệp vụ, khả năng xử lý dữ liệu, sự phối hợp giữa các module và đặc biệt là việc kiểm soát quyền truy cập của người dùng. Qua đó, nhóm có thể đánh giá mức độ đáp ứng của phần mềm đối với các yêu cầu đã đặt ra, đồng thời phát hiện những lỗi hoặc tình huống chưa phù hợp trước khi hệ thống được đưa vào sử dụng thực tế.
+Đặc tả yêu cầu
+Các luồng nghiệp vụ chính
+Hệ thống quản lý vàng bạc, trang sức được xây dựng theo mô hình đa doanh nghiệp. Công ty chủ quản chịu trách nhiệm vận hành nền tảng và cung cấp phần mềm cho nhiều doanh nghiệp khác nhau. Mỗi doanh nghiệp sau khi được khởi tạo có thể tổ chức hoạt động theo nhiều chi nhánh, mỗi chi nhánh có thể có một hoặc nhiều kho hàng, nhân viên và các nghiệp vụ kinh doanh riêng.
+Do đặc thù hệ thống phục vụ đồng thời nhiều doanh nghiệp, mọi dữ liệu phát sinh đều phải được xác định rõ phạm vi sở hữu. Một giao dịch, sản phẩm, nhân viên hay kho hàng không chỉ tồn tại độc lập mà còn phải gắn với doanh nghiệp và chi nhánh tương ứng. Bên cạnh đó, trước khi thực hiện bất kỳ chức năng nào, hệ thống phải kiểm tra danh tính người dùng, vai trò, quyền hạn và phạm vi dữ liệu mà tài khoản được phép truy cập.
+Các luồng nghiệp vụ dưới đây được mô tả theo hướng từ đầu đến cuối, bao gồm quá trình người dùng tương tác với giao diện, dữ liệu được hệ thống tiếp nhận và xử lý, các điều kiện kiểm tra và kết quả cuối cùng.
+Luồng đăng nhập và xác định quyền truy cập
+Đăng nhập là bước đầu tiên trước khi người dùng có thể thực hiện các nghiệp vụ trên hệ thống. Tại màn hình đăng nhập, người dùng cung cấp tên đăng nhập và mật khẩu. Sau khi người dùng gửi yêu cầu, hệ thống kiểm tra xem các trường thông tin cần thiết đã được nhập đầy đủ hay chưa. Nếu thông tin chưa đầy đủ, yêu cầu đăng nhập không được tiếp tục và hệ thống hiển thị thông báo để người dùng bổ sung.
+Khi dữ liệu đầu vào hợp lệ, hệ thống tìm kiếm tài khoản tương ứng trong cơ sở dữ liệu và thực hiện xác thực mật khẩu. Nếu tài khoản không tồn tại, mật khẩu không chính xác hoặc tài khoản đang ở trạng thái bị khóa, hệ thống từ chối đăng nhập và trả về thông báo phù hợp.
+Trong trường hợp xác thực thành công, hệ thống không đưa người dùng trực tiếp vào toàn bộ chương trình mà tiếp tục xác định phạm vi hoạt động của tài khoản. Các thông tin về vai trò, doanh nghiệp, chi nhánh và quyền được cấp được truy xuất để xác định người dùng có thể sử dụng những chức năng nào và được phép truy cập dữ liệu ở phạm vi nào.
+Ví dụ, quản trị viên của công ty chủ quản có thể truy cập các chức năng quản lý doanh nghiệp, trong khi người quản lý một doanh nghiệp chỉ được làm việc với dữ liệu thuộc doanh nghiệp đó. Tương tự, nhân viên thuộc một chi nhánh chỉ được thực hiện các chức năng và truy cập dữ liệu của chi nhánh khi có quyền tương ứng.
+Sau khi quá trình xác thực và phân quyền hoàn tất, hệ thống tạo phiên làm việc và chuyển người dùng đến giao diện chính. Các menu và chức năng được hiển thị dựa trên quyền của tài khoản.
+Hình 1.1: Sơ đồ Activity Diagram luồng đăng nhập và xác định quyền truy cập
+Qua luồng trên có thể thấy việc đăng nhập không chỉ có nhiệm vụ xác thực danh tính mà còn là cơ sở để hệ thống thiết lập phạm vi dữ liệu cho toàn bộ các nghiệp vụ tiếp theo. Điều này đặc biệt quan trọng trong mô hình có nhiều doanh nghiệp cùng sử dụng chung một hệ thống.
+Luồng khởi tạo và quản lý doanh nghiệp
+Khi một doanh nghiệp mới bắt đầu sử dụng phần mềm, quản trị viên của công ty chủ quản thực hiện việc khởi tạo doanh nghiệp trên hệ thống. Người quản trị truy cập chức năng quản lý doanh nghiệp và nhập các thông tin cần thiết như mã doanh nghiệp, tên doanh nghiệp, địa chỉ, số điện thoại, email, người đại diện và trạng thái hoạt động.
+Sau khi thông tin được gửi lên, hệ thống tiến hành kiểm tra dữ liệu. Những trường bắt buộc không được để trống, các thông tin có tính duy nhất như mã doanh nghiệp phải được kiểm tra để tránh trùng lặp với dữ liệu đã tồn tại.
+Nếu phát hiện dữ liệu không hợp lệ, hệ thống không thực hiện lưu và thông báo nguyên nhân để người quản trị chỉnh sửa. Ngược lại, nếu thông tin đáp ứng các điều kiện, hệ thống tạo mới bản ghi doanh nghiệp và xác lập một phạm vi dữ liệu riêng dành cho doanh nghiệp đó.
+Từ thời điểm này, các chi nhánh, kho, nhân viên, hàng hóa, bảng giá, giao dịch và báo cáo phát sinh sau này đều phải được gắn với doanh nghiệp tương ứng. Việc gắn dữ liệu theo phạm vi này giúp ngăn chặn trường hợp doanh nghiệp này truy cập hoặc thay đổi dữ liệu của doanh nghiệp khác.
+Sau khi doanh nghiệp được tạo thành công, hệ thống có thể tiếp tục tạo tài khoản quản trị ban đầu cho doanh nghiệp để người đại diện thực hiện các thiết lập tiếp theo.
+Hình 1.2: Sơ đồ luồng khởi tạo doanh nghiệp trên hệ thống
+Luồng quản lý chi nhánh, kho và hàng hóa
+Sau khi doanh nghiệp được khởi tạo, người quản lý có thể tổ chức hoạt động kinh doanh theo các chi nhánh khác nhau. Mỗi chi nhánh được xác định bằng thông tin riêng và luôn gắn với một doanh nghiệp cụ thể.
+Người quản lý trước tiên tạo chi nhánh bằng cách nhập các thông tin như mã chi nhánh, tên chi nhánh, địa chỉ, số điện thoại và trạng thái hoạt động. Hệ thống kiểm tra dữ liệu và xác định doanh nghiệp sở hữu chi nhánh trước khi lưu.
+Sau khi chi nhánh được tạo thành công, người dùng có thể tiếp tục thiết lập các kho hàng trực thuộc. Mỗi kho được liên kết với một chi nhánh cụ thể và được sử dụng để quản lý hàng hóa tại đơn vị đó.
+Khi một sản phẩm vàng bạc hoặc trang sức được đưa vào hệ thống, người dùng thực hiện khai báo các thông tin cần thiết của sản phẩm. Tùy theo nghiệp vụ, thông tin có thể bao gồm mã sản phẩm, tên sản phẩm, loại vàng, hàm lượng vàng, trọng lượng, số lượng, đơn vị tính, tiền công, giá và trạng thái sản phẩm.
+Sau khi người dùng xác nhận, hệ thống kiểm tra tính hợp lệ của dữ liệu. Đồng thời, hệ thống phải xác định kho được chọn có thực sự thuộc chi nhánh hiện tại và chi nhánh đó có thuộc doanh nghiệp của người dùng hay không.
+Nếu thông tin hợp lệ, sản phẩm được lưu vào hệ thống và dữ liệu tồn kho ban đầu được tạo. Kể từ thời điểm đó, mọi hoạt động liên quan như nhập hàng, bán hàng, mua lại hàng, điều chuyển hoặc kiểm kê đều có thể làm thay đổi số lượng tồn kho.
+Những thay đổi này không nên chỉ cập nhật giá trị tồn hiện tại mà còn cần được ghi nhận trong lịch sử biến động kho để phục vụ việc tra cứu và đối soát sau này.
+Hình 1.3: Sơ đồ luồng quản lý chi nhánh, kho và hàng hóa
+Luồng quản lý nhân viên và phân quyền
+Sau khi chi nhánh được thiết lập, doanh nghiệp có thể bổ sung nhân viên và cấp tài khoản sử dụng hệ thống. Mỗi nhân viên được gắn với một doanh nghiệp và có thể được phân công làm việc tại một chi nhánh cụ thể.
+Khi tạo tài khoản, người quản lý lựa chọn vai trò và các quyền phù hợp với vị trí của nhân viên. Từ các quyền được cấp, hệ thống xác định những chức năng mà tài khoản được phép sử dụng.
+Điểm quan trọng là việc kiểm tra quyền không chỉ được thực hiện trên giao diện. Ngay cả khi người dùng cố gửi yêu cầu trực tiếp đến hệ thống, hệ thống vẫn phải kiểm tra quyền trước khi xử lý nghiệp vụ.
+Ví dụ, một nhân viên bán hàng có thể được phép tạo giao dịch bán nhưng không được tạo doanh nghiệp, thay đổi phân quyền hoặc xem dữ liệu của doanh nghiệp khác.
+Hình 1.4: Sơ đồ phân quyền người dùng trong hệ thống
+Luồng giao dịch bán hàng
+Giao dịch bán hàng là một trong những nghiệp vụ trung tâm của hệ thống. Khi khách hàng lựa chọn sản phẩm, nhân viên bán hàng tiến hành tìm kiếm hoặc quét mã sản phẩm trên hệ thống.
+Hệ thống kiểm tra sản phẩm có tồn tại hay không, sản phẩm thuộc kho nào, trạng thái hiện tại và số lượng còn trong kho. Nếu sản phẩm không còn hoặc không được phép bán, hệ thống thông báo và không cho phép tiếp tục giao dịch.
+Khi sản phẩm hợp lệ, hệ thống lấy dữ liệu liên quan đến sản phẩm và bảng giá hiện hành để phục vụ quá trình tính giá. Nhân viên nhập các thông tin cần thiết của giao dịch và hệ thống tính toán giá trị phải thanh toán.
+Sau khi nhân viên kiểm tra thông tin và xác nhận giao dịch, hệ thống lưu hóa đơn hoặc giao dịch bán hàng. Đồng thời số lượng sản phẩm tương ứng trong kho được giảm và lịch sử biến động tồn kho được ghi nhận.
+Dữ liệu của giao dịch sau đó trở thành nguồn thông tin cho báo cáo doanh thu, thống kê sản phẩm bán ra và các báo cáo quản trị khác.
+Hình 1.5: Activity Diagram luồng giao dịch bán hàng
+Luồng giao dịch mua hàng hoặc mua lại vàng
+Khi doanh nghiệp thực hiện nghiệp vụ mua hàng hoặc mua lại vàng từ khách hàng, nhân viên nhập thông tin của loại vàng hoặc sản phẩm cần mua. Hệ thống tiếp nhận dữ liệu về loại vàng, trọng lượng, số lượng và các thông tin liên quan.
+Hệ thống kiểm tra dữ liệu, lấy bảng giá mua tương ứng và thực hiện tính toán giá trị giao dịch. Nhân viên kiểm tra kết quả trước khi xác nhận.
+Khi giao dịch được hoàn tất, hệ thống lưu thông tin mua hàng. Nếu sản phẩm sau giao dịch được nhập vào kho, hệ thống đồng thời tạo hoặc cập nhật dữ liệu tồn kho.
+Hình 1.6: Activity Diagram luồng giao dịch mua vàng
+Luồng báo cáo và thống kê
+Sau khi các hoạt động mua bán được thực hiện, dữ liệu giao dịch trở thành cơ sở để hệ thống lập các báo cáo quản lý.
+Người dùng truy cập chức năng báo cáo và lựa chọn khoảng thời gian hoặc phạm vi cần thống kê. Trước khi truy xuất dữ liệu, hệ thống kiểm tra phạm vi quyền của người dùng.
+Người quản lý doanh nghiệp có thể được phép xem dữ liệu của toàn bộ các chi nhánh trực thuộc, trong khi người quản lý chi nhánh chỉ có thể xem dữ liệu thuộc chi nhánh của mình.
+Sau khi xác định phạm vi, hệ thống truy vấn dữ liệu giao dịch, tồn kho và các dữ liệu liên quan, thực hiện tổng hợp và trả về kết quả cho người dùng.
+Hình 1.7: Sơ đồ luồng tạo báo cáo doanh thu
+Các màn hình chức năng chính
+Màn hình đăng nhập
+Hình 1.8: Bản phác thảo giao diện đăng nhập
+Tại màn hình này, người dùng nhập Tên đăng nhập và Mật khẩu đã được cấp. Trường mật khẩu được hiển thị ở trạng thái ẩn mặc định nhằm hạn chế việc lộ thông tin trong quá trình sử dụng. Người dùng có thể sử dụng biểu tượng hiển thị hoặc ẩn mật khẩu để kiểm tra nội dung đã nhập trước khi thực hiện đăng nhập.
+Sau khi người dùng nhấn nút Đăng nhập, hệ thống tiếp nhận dữ liệu và tiến hành kiểm tra tính đầy đủ của các trường thông tin. Tên đăng nhập và mật khẩu đều là những dữ liệu bắt buộc. Nếu một trong hai trường bị bỏ trống, hệ thống không tiếp tục quá trình xác thực mà hiển thị thông báo yêu cầu người dùng bổ sung thông tin.
+Khi dữ liệu đầu vào đã đầy đủ, hệ thống tiếp tục kiểm tra sự tồn tại của tài khoản, đối chiếu mật khẩu và xác định trạng thái hoạt động của tài khoản. Chỉ những tài khoản tồn tại, có mật khẩu chính xác và đang ở trạng thái được phép sử dụng mới có thể tiếp tục truy cập hệ thống. Trong trường hợp tên đăng nhập không tồn tại, mật khẩu không đúng hoặc tài khoản đã bị khóa hay vô hiệu hóa, hệ thống từ chối yêu cầu đăng nhập và hiển thị thông báo phù hợp.
+Sau khi xác thực thành công, hệ thống xác định các thông tin liên quan đến người dùng như vai trò, quyền hạn, doanh nghiệp và chi nhánh trực thuộc. Dựa trên các thông tin này, hệ thống thiết lập phạm vi dữ liệu mà người dùng được phép truy cập và các chức năng được phép sử dụng. Nhờ đó, mỗi tài khoản chỉ có thể thao tác trong phạm vi quyền hạn đã được cấp.
+Khi toàn bộ quá trình xác thực và phân quyền hoàn tất, người dùng được chuyển đến giao diện chính của hệ thống. Các chức năng hiển thị sau đăng nhập phụ thuộc vào vai trò và quyền của từng tài khoản, giúp bảo đảm người dùng không thể truy cập trái phép vào các chức năng hoặc dữ liệu ngoài phạm vi quản lý của mình.
+Các điều kiện ràng buộc
+Tên đăng nhập và mật khẩu là hai trường bắt buộc, do đó người dùng không được để trống khi thực hiện đăng nhập. Tên đăng nhập phải tương ứng với một tài khoản tồn tại trong hệ thống, trong khi mật khẩu phải chính xác với thông tin xác thực của tài khoản đó.
+Mật khẩu được ẩn mặc định nhằm bảo đảm an toàn thông tin trong quá trình sử dụng. Việc sử dụng chức năng hiển thị mật khẩu chỉ thay đổi cách trình bày trên giao diện và không làm thay đổi giá trị dữ liệu đã nhập.
+Ngoài việc kiểm tra thông tin xác thực, hệ thống còn phải kiểm tra trạng thái của tài khoản. Một tài khoản có thông tin đăng nhập chính xác nhưng đang bị khóa, vô hiệu hóa hoặc không còn được phép hoạt động vẫn không được truy cập hệ thống.
+Hệ thống cũng cần kiểm soát số lần và trạng thái đăng nhập theo các quy tắc bảo mật đã được thiết lập. Khi thông tin không hợp lệ, hệ thống không tạo phiên làm việc cho người dùng và không được để lộ các thông tin nhạy cảm về tài khoản thông qua nội dung thông báo lỗi.
+Mô tả luồng xử lý
+Khi người dùng mở màn hình đăng nhập, hệ thống chờ tiếp nhận tên đăng nhập và mật khẩu. Sau khi người dùng nhấn nút Đăng nhập, dữ liệu được gửi đến chức năng xác thực để kiểm tra tính đầy đủ và hợp lệ.
+Nếu dữ liệu đầu vào không đáp ứng yêu cầu, quá trình xác thực dừng lại và hệ thống thông báo để người dùng nhập lại. Nếu dữ liệu hợp lệ, hệ thống tìm kiếm tài khoản tương ứng, xác thực mật khẩu và kiểm tra trạng thái tài khoản.
+Sau khi tài khoản được xác thực thành công, hệ thống tiếp tục truy xuất thông tin vai trò và quyền hạn của người dùng, xác định phạm vi doanh nghiệp hoặc chi nhánh mà tài khoản được phép làm việc, sau đó tạo phiên sử dụng và chuyển người dùng tới giao diện chính.
+Màn hình quản lý doanh nghiệp
+Hình 1.9: Phác thảo trang quản lý doanh nhiệp
+Màn hình quản lý doanh nghiệp
+Màn hình quản lý doanh nghiệp được sử dụng để theo dõi và quản lý các doanh nghiệp đang hoạt động trên hệ thống. Đây là chức năng dành cho những người dùng có quyền quản trị ở cấp công ty chủ quản. Tại màn hình này, người quản trị có thể xem danh sách doanh nghiệp hiện có, tìm kiếm nhanh theo các thông tin nhận diện, làm mới dữ liệu và thực hiện thao tác khởi tạo doanh nghiệp mới.
+Danh sách doanh nghiệp được trình bày dưới dạng bảng, trong đó mỗi bản ghi hiển thị các thông tin cơ bản như tên công ty, mã số thuế, địa chỉ, thông tin liên hệ, trạng thái hoạt động và ngày tạo. Cách trình bày này giúp người quản trị dễ dàng theo dõi, so sánh và nhận biết tình trạng của từng doanh nghiệp đang sử dụng hệ thống. Phía trên danh sách có ô tìm kiếm hỗ trợ tra cứu theo tên doanh nghiệp, mã số thuế, số điện thoại hoặc email. Bên cạnh đó, hệ thống cũng hiển thị tổng số doanh nghiệp hiện có nhằm giúp người dùng nhanh chóng nắm được quy mô dữ liệu đang được quản lý.
+Các điều kiện ràng buộc
+Thông tin doanh nghiệp phải bảo đảm tính đầy đủ và hợp lệ trước khi được lưu vào hệ thống. Trong đó, tên doanh nghiệp và mã số thuế là những thông tin quan trọng dùng để nhận diện doanh nghiệp nên không được để trống. Mã số thuế cần được kiểm tra tính duy nhất nhằm tránh việc tạo nhiều doanh nghiệp có cùng thông tin nhận diện trong hệ thống.
+Đối với các trường thông tin liên hệ, số điện thoại phải tuân theo định dạng do hệ thống quy định, còn địa chỉ email phải có cấu trúc hợp lệ trước khi được chấp nhận. Trạng thái doanh nghiệp cũng chỉ được nhận các giá trị đã được định nghĩa sẵn trong hệ thống, chẳng hạn đang hoạt động hoặc ngừng hoạt động, nhằm bảo đảm tính nhất quán trong quá trình quản lý.
+Bên cạnh các ràng buộc về dữ liệu, hệ thống còn áp dụng kiểm soát quyền truy cập đối với chức năng quản lý doanh nghiệp. Chỉ những tài khoản được cấp quyền phù hợp ở cấp công ty chủ quản mới có thể thực hiện các thao tác như thêm mới, chỉnh sửa hoặc thay đổi trạng thái doanh nghiệp. Những người dùng không có quyền tương ứng chỉ được phép truy cập các chức năng nằm trong phạm vi đã được cấp hoặc bị từ chối hoàn toàn khi cố thực hiện thao tác quản trị.
+Chức năng tìm kiếm
+Chức năng tìm kiếm được thiết kế để hỗ trợ người quản trị nhanh chóng xác định doanh nghiệp cần theo dõi mà không phải duyệt toàn bộ danh sách. Khi người dùng nhập từ khóa vào ô tìm kiếm, hệ thống tiến hành đối chiếu từ khóa với các thông tin như tên doanh nghiệp, mã số thuế, số điện thoại hoặc email và trả về những bản ghi phù hợp.
+Trong trường hợp không có doanh nghiệp nào thỏa mãn điều kiện tìm kiếm, hệ thống hiển thị danh sách rỗng hoặc thông báo không tìm thấy dữ liệu. Khi người dùng xóa nội dung tìm kiếm, hệ thống khôi phục lại danh sách doanh nghiệp hiện có để tiếp tục thao tác. Chức năng này giúp rút ngắn thời gian tra cứu, đặc biệt khi số lượng doanh nghiệp trên hệ thống tăng lên.
+Chức năng thêm mới doanh nghiệp
+Khi người quản trị lựa chọn chức năng “Thêm công ty mới”, hệ thống mở giao diện nhập thông tin doanh nghiệp. Tại đây, người dùng cung cấp các dữ liệu cần thiết và xác nhận thao tác tạo mới. Trước khi ghi nhận dữ liệu, hệ thống thực hiện kiểm tra các trường bắt buộc, định dạng thông tin liên hệ và các giá trị có yêu cầu duy nhất như mã số thuế.
+Nếu phát hiện dữ liệu không hợp lệ hoặc doanh nghiệp có thông tin trùng với một bản ghi đã tồn tại, hệ thống không thực hiện lưu mà thông báo để người dùng kiểm tra và chỉnh sửa. Trong trường hợp toàn bộ dữ liệu hợp lệ, hệ thống tạo bản ghi doanh nghiệp mới, ghi nhận thời điểm tạo và cập nhật doanh nghiệp vào danh sách quản lý.
+Sau khi được khởi tạo thành công, doanh nghiệp trở thành một phạm vi quản lý riêng trên hệ thống. Các dữ liệu phát sinh sau đó như chi nhánh, kho hàng, nhân viên, tài khoản, hàng hóa và giao dịch đều được liên kết với doanh nghiệp tương ứng. Việc tổ chức dữ liệu theo phạm vi này giúp hệ thống duy trì sự tách biệt giữa các doanh nghiệp và hỗ trợ quá trình phân quyền một cách rõ ràng.
+Mô tả luồng xử lý
+Khi người quản trị truy cập chức năng Quản lý doanh nghiệp, hệ thống trước tiên kiểm tra thông tin tài khoản và quyền truy cập của người dùng. Nếu tài khoản có quyền phù hợp, hệ thống truy xuất danh sách các doanh nghiệp hiện có từ cơ sở dữ liệu và hiển thị các thông tin cần thiết trên giao diện.
+Từ màn hình này, người dùng có thể thực hiện tìm kiếm doanh nghiệp theo các tiêu chí được hỗ trợ hoặc lựa chọn chức năng thêm mới doanh nghiệp. Trong trường hợp tạo mới, dữ liệu được gửi đến hệ thống để kiểm tra tính đầy đủ, định dạng và khả năng trùng lặp trước khi lưu. Nếu dữ liệu hợp lệ, doanh nghiệp mới được ghi nhận vào cơ sở dữ liệu và danh sách trên giao diện được cập nhật để phản ánh thông tin mới nhất.
+Như vậy, luồng xử lý của màn hình quản lý doanh nghiệp bắt đầu từ việc xác định quyền người dùng, truy xuất và hiển thị dữ liệu, tiếp nhận yêu cầu tìm kiếm hoặc tạo mới, thực hiện kiểm tra thông tin và kết thúc bằng việc cập nhật dữ liệu quản lý trên hệ thống.
+Màn hình quản lý chi nhánh
+Màn hình quản lý chi nhánh được sử dụng để theo dõi thông tin và tình trạng hoạt động của các chi nhánh trực thuộc doanh nghiệp. Giao diện cung cấp cái nhìn tổng quan về số lượng chi nhánh, tổng nhân sự và doanh thu trong tháng, đồng thời hiển thị chi tiết từng chi nhánh dưới dạng các thẻ thông tin riêng biệt.
+Hình 1.10: Phác thảo giao diện quản lý chi nhánh
+Các điều kiện ràng buộc
+Mỗi chi nhánh trong hệ thống phải có một mã định danh riêng nhằm bảo đảm khả năng phân biệt và quản lý chính xác giữa các đơn vị trực thuộc. Mã chi nhánh không được phép trùng với mã của chi nhánh khác trong cùng doanh nghiệp. Bên cạnh đó, các thông tin cơ bản như tên chi nhánh và địa chỉ cần được khai báo đầy đủ để phục vụ cho quá trình quản lý và tra cứu dữ liệu.
+Người quản lý được gán cho một chi nhánh phải là nhân sự hợp lệ thuộc phạm vi doanh nghiệp đang quản lý chi nhánh đó. Hệ thống không cho phép gán một nhân sự không thuộc doanh nghiệp hoặc không còn ở trạng thái phù hợp làm người quản lý chi nhánh. Số lượng nhân sự của chi nhánh không được nhập trực tiếp mà được hệ thống tự động tổng hợp dựa trên các nhân viên hiện đang được phân công làm việc tại chi nhánh tương ứng.
+Trạng thái của chi nhánh chỉ được phép nhận các giá trị đã được quy định trước trong hệ thống. Tùy theo trạng thái hiện tại, một số nghiệp vụ có thể bị giới hạn hoặc không cho phép thực hiện. Ví dụ, với chi nhánh đang ở trạng thái bảo trì quầy hoặc tạm ngừng hoạt động, các chức năng bán hàng hoặc giao dịch tại quầy có thể bị hạn chế theo quy tắc nghiệp vụ của hệ thống.
+Doanh thu tháng của từng chi nhánh cũng không phải là dữ liệu do người dùng nhập trực tiếp. Giá trị này được hệ thống tổng hợp từ các giao dịch hợp lệ đã phát sinh trong tháng tại chi nhánh. Vì vậy, người dùng chỉ có thể theo dõi kết quả doanh thu mà không thể chỉnh sửa trực tiếp giá trị này trên màn hình quản lý chi nhánh.
+Chức năng tổng hợp dữ liệu
+Tại khu vực tổng quan, hệ thống hiển thị ba chỉ số chính gồm tổng số chi nhánh, tổng số nhân sự tại các chi nhánh và tổng doanh thu trong tháng. Các chỉ số này được tính toán trực tiếp từ dữ liệu đang được quản lý trong hệ thống, giúp người dùng có thể nhanh chóng nắm bắt quy mô và tình hình hoạt động chung của toàn bộ hệ thống chi nhánh.
+Tổng số chi nhánh được xác định dựa trên số lượng chi nhánh hiện có thuộc doanh nghiệp đang được quản lý. Tổng số nhân sự được tổng hợp từ số nhân viên đang làm việc tại các chi nhánh, trong khi doanh thu tháng được tính từ các giao dịch hợp lệ phát sinh trong khoảng thời gian tương ứng.
+Trong giao diện minh họa, hệ thống đang quản lý 3 chi nhánh, với tổng cộng 39 nhân sự và doanh thu tháng đạt 2.543.000.000 đồng. Dữ liệu tổng quan này được hình thành từ thông tin chi tiết của từng chi nhánh được hiển thị ngay bên dưới, nhờ đó người quản lý vừa có thể theo dõi tình hình chung vừa có thể xem xét hoạt động của từng đơn vị cụ thể.
+Ở phần danh sách chi nhánh, mỗi chi nhánh được trình bày dưới dạng một thẻ thông tin riêng. Trên mỗi thẻ, hệ thống hiển thị mã chi nhánh, tên chi nhánh, địa chỉ, người quản lý, số lượng nhân sự, số điện thoại liên hệ, doanh thu tháng và trạng thái hoạt động. Cách bố trí này giúp người quản lý dễ dàng so sánh và theo dõi tình hình hoạt động giữa các chi nhánh mà không cần truy cập từng màn hình chi tiết riêng biệt.
+Mô tả luồng xử lý
+Khi người dùng truy cập chức năng Quản lý chi nhánh, hệ thống trước tiên xác định tài khoản hiện tại, doanh nghiệp mà người dùng thuộc về và phạm vi quyền đã được cấp. Chỉ những người dùng có quyền phù hợp mới được phép truy cập và xem dữ liệu của các chi nhánh thuộc doanh nghiệp tương ứng.
+Sau khi xác định được phạm vi dữ liệu, hệ thống tiến hành truy xuất danh sách các chi nhánh cùng những thông tin liên quan như địa chỉ, người quản lý, số lượng nhân sự, trạng thái hoạt động và doanh thu trong tháng. Dữ liệu nhân sự được tổng hợp từ các bản ghi nhân viên đang được phân công tại từng chi nhánh, trong khi doanh thu được tính toán từ các giao dịch hợp lệ phát sinh trong khoảng thời gian hiện tại.
+Kết quả xử lý sau đó được hiển thị trên giao diện dưới hai mức thông tin. Ở mức tổng quan, hệ thống cung cấp số lượng chi nhánh, tổng nhân sự và tổng doanh thu tháng. Ở mức chi tiết, từng chi nhánh được hiển thị với đầy đủ các thông tin cần thiết để người quản lý theo dõi tình trạng vận hành. Nhờ đó, người dùng có thể nhanh chóng đánh giá tình hình hoạt động của toàn bộ hệ thống chi nhánh mà không cần thực hiện nhiều bước tra cứu riêng lẻ.
+Màn hình quản lý kho
+Màn hình quản lý kho được sử dụng để theo dõi tình trạng hàng hóa, số lượng tồn và các thông tin liên quan đến vàng bạc, trang sức đang được lưu trữ trong hệ thống. Đây là một trong những màn hình nghiệp vụ quan trọng vì dữ liệu kho có liên quan trực tiếp đến hoạt động nhập hàng, bán hàng, kiểm kê, điều chỉnh tồn và quản lý hàng hóa tại từng chi nhánh.
+Hình 1.11: Phác thảo giao diện quản lý kho
+Tại khu vực phía trên màn hình, hệ thống hiển thị các thông tin tổng quan về tình trạng kho nhằm giúp người quản lý có thể nhanh chóng nắm bắt số lượng và giá trị hàng hóa đang được quản lý. Các chỉ số chính bao gồm tổng lượng vàng tồn kho, tổng số món nữ trang, số lượng mẫu hàng và số mặt hàng đang ở mức cảnh báo sắp hết.
+Trong giao diện hiện tại, tổng lượng vàng tồn kho được ghi nhận là 225,60 chỉ, tương đương khoảng 22,56 lượng vàng ròng. Hệ thống đang quản lý 63 món nữ trang, với 5 mẫu hàng và có 1 mẫu được cảnh báo sắp hết. Các số liệu này không được người dùng nhập trực tiếp mà được hệ thống tổng hợp dựa trên dữ liệu hàng hóa và tồn kho hiện có.
+Bên dưới khu vực tổng quan là chức năng tìm kiếm và lọc hàng hóa. Người dùng có thể nhập từ khóa để tìm kiếm theo tên sản phẩm, mã tem hoặc nhóm hàng. Bên cạnh đó, hệ thống hỗ trợ lọc nhanh theo các loại vàng như Vàng 24K, Vàng 18K và Vàng 14K. Khi người dùng lựa chọn một loại vàng cụ thể, danh sách sản phẩm bên dưới sẽ được cập nhật để chỉ hiển thị những mặt hàng phù hợp với điều kiện lọc. Khi lựa chọn mục Tất cả, hệ thống hiển thị toàn bộ các sản phẩm thuộc phạm vi kho mà người dùng có quyền truy cập.
+Danh sách hàng hóa được trình bày dưới dạng bảng và thể hiện các thông tin cần thiết để phục vụ quá trình quản lý kho. Mỗi sản phẩm có mã tem dùng để nhận diện, tên sản phẩm, loại vàng, trọng lượng tổng, trọng lượng đá, trọng lượng vàng ròng, tiền công, vị trí lưu trữ và số lượng tồn kho hiện tại. Ngoài ra, hệ thống còn cung cấp khu vực thao tác để người dùng thực hiện các chức năng quản lý đối với từng sản phẩm khi có quyền phù hợp.
+Mã tem của sản phẩm có vai trò xác định và phân biệt từng mặt hàng trong hệ thống. Đối với những sản phẩm được quản lý riêng theo từng mã tem, mã này phải bảo đảm tính duy nhất và không được trùng với sản phẩm đã tồn tại. Tên sản phẩm và loại vàng cần được xác định đầy đủ để thuận tiện cho việc tìm kiếm, phân loại và sử dụng trong các nghiệp vụ mua bán sau này.
+Các thông tin liên quan đến trọng lượng phải được kiểm soát chặt chẽ do ảnh hưởng trực tiếp đến giá trị của sản phẩm. Trọng lượng tổng phải là giá trị số hợp lệ và lớn hơn 0. Trọng lượng đá, nếu sản phẩm có gắn đá hoặc thành phần không phải vàng, không được mang giá trị âm và không được lớn hơn trọng lượng tổng của sản phẩm. Trọng lượng vàng ròng thể hiện khối lượng vàng thực tế sau khi loại trừ các thành phần không thuộc vàng theo quy tắc nghiệp vụ của hệ thống.
+Loại vàng của sản phẩm phải thuộc một trong các loại đã được khai báo trong hệ thống, chẳng hạn 24K, 18K hoặc 14K. Việc sử dụng danh mục loại vàng thống nhất giúp hệ thống tránh tình trạng cùng một loại vàng được nhập với nhiều cách gọi khác nhau, đồng thời tạo điều kiện thuận lợi cho quá trình lọc dữ liệu, tính giá và lập báo cáo.
+Tiền công của sản phẩm được quản lý dưới dạng giá trị số và không được nhỏ hơn 0. Với những mặt hàng không phát sinh tiền công, hệ thống có thể ghi nhận giá trị bằng 0. Giá trị này sau đó có thể được sử dụng cùng với trọng lượng vàng và bảng giá để phục vụ quá trình tính toán giá bán của sản phẩm.
+Thông tin vị trí lưu trữ giúp xác định sản phẩm hiện đang được đặt tại đâu trong kho hoặc khu vực trưng bày. Trong giao diện có thể thấy các vị trí như Tủ 01, Tủ 02, Tủ 03, Tủ 04 hoặc két sắt bảo hiểm. Việc quản lý vị trí giúp nhân viên nhanh chóng tìm được sản phẩm trong quá trình bán hàng, kiểm kê hoặc điều chuyển.
+Số lượng tồn kho phản ánh số đơn vị sản phẩm hiện còn tại kho. Giá trị này không được phép nhỏ hơn 0 và không nên được thay đổi trực tiếp một cách tùy ý. Mọi thay đổi về tồn kho cần phát sinh từ các nghiệp vụ hợp lệ như nhập kho, bán hàng, điều chuyển hàng hoặc điều chỉnh sau kiểm kê. Cách quản lý này giúp hệ thống duy trì lịch sử biến động và hạn chế việc số liệu tồn kho bị thay đổi mà không có căn cứ.
+Chức năng “Nhập kho mới” cho phép người dùng bổ sung hàng hóa vào kho. Khi người dùng lựa chọn chức năng này, hệ thống mở giao diện nhập các thông tin cần thiết của sản phẩm hoặc của lần nhập hàng. Trước khi xác nhận, hệ thống cần kiểm tra tính hợp lệ của mã hàng, loại vàng, trọng lượng, số lượng, tiền công và vị trí lưu trữ. Khi thao tác nhập kho thành công, số lượng tồn được cập nhật và dữ liệu tổng quan trên màn hình cũng phải được tính toán lại.
+Đối với những sản phẩm đã tồn tại trong hệ thống, nghiệp vụ nhập thêm có thể làm tăng số lượng tồn của sản phẩm tương ứng. Trường hợp sản phẩm hoàn toàn mới, thông tin sản phẩm cần được tạo và liên kết với kho trước khi hệ thống ghi nhận tồn kho. Sau mỗi lần nhập, hệ thống cần lưu lại thông tin biến động để phục vụ việc kiểm tra và đối soát sau này.
+Màn hình cũng hỗ trợ cơ chế cảnh báo những mặt hàng có số lượng tồn thấp. Khi số lượng sản phẩm đạt hoặc thấp hơn ngưỡng cảnh báo do hệ thống quy định, mặt hàng được đưa vào nhóm sắp hết. Tổng số mặt hàng thuộc nhóm này được hiển thị tại khu vực cảnh báo phía trên màn hình. Chức năng này giúp người quản lý chủ động nhận biết các sản phẩm cần nhập bổ sung trước khi xảy ra tình trạng hết hàng.
+Khi số lượng của sản phẩm được bổ sung và vượt qua ngưỡng cảnh báo, hệ thống cần tự động cập nhật trạng thái cảnh báo. Nhờ đó, số liệu hiển thị luôn phản ánh đúng tình trạng thực tế của kho tại thời điểm người dùng truy cập.
+Ngoài các chức năng tra cứu và quản lý tồn kho, màn hình còn hỗ trợ Xuất Excel. Chức năng này cho phép người dùng trích xuất dữ liệu hàng hóa trong kho thành tệp phục vụ lưu trữ, đối chiếu hoặc sử dụng cho các báo cáo bên ngoài hệ thống. Dữ liệu xuất ra cần bảo đảm thống nhất với dữ liệu đang được quản lý, bao gồm các thông tin như mã tem, tên sản phẩm, loại vàng, trọng lượng, tiền công, vị trí lưu trữ và số lượng tồn.
+Các điều kiện ràng buộc
+Dữ liệu kho phải luôn được gắn với đúng phạm vi doanh nghiệp và chi nhánh. Người dùng chỉ được phép xem hoặc thao tác trên các kho nằm trong phạm vi quyền đã được cấp. Một nhân viên thuộc chi nhánh này không được tự ý truy cập dữ liệu kho của chi nhánh khác nếu không có quyền tương ứng.
+Các giá trị số như trọng lượng, số lượng tồn và tiền công phải bảo đảm đúng kiểu dữ liệu và nằm trong phạm vi hợp lệ. Trọng lượng và số lượng không được mang giá trị âm. Số lượng sản phẩm bán ra không được vượt quá lượng tồn kho hiện tại. Khi một thao tác có khả năng làm tồn kho nhỏ hơn 0, hệ thống phải từ chối yêu cầu và không được cập nhật dữ liệu.
+Thông tin về loại vàng và vị trí lưu trữ phải thuộc các danh mục hợp lệ đã được thiết lập trong hệ thống. Điều này giúp duy trì sự thống nhất giữa dữ liệu hàng hóa, kho và các nghiệp vụ mua bán. Đối với mã tem, hệ thống cần kiểm tra tính hợp lệ và tránh tạo trùng đối với những sản phẩm yêu cầu mã định danh duy nhất.
+Các chỉ số tổng hợp như tổng lượng vàng tồn kho, tổng số món nữ trang, số mẫu hàng và số mặt hàng sắp hết không được phép chỉnh sửa trực tiếp. Những giá trị này phải được hệ thống tự động tính toán dựa trên dữ liệu hàng hóa thực tế nhằm bảo đảm tính nhất quán.
+Mô tả luồng xử lý
+Khi người dùng truy cập chức năng Quản lý kho, hệ thống trước tiên xác định tài khoản hiện tại, doanh nghiệp, chi nhánh và phạm vi quyền được cấp. Sau khi quyền truy cập được xác nhận, hệ thống truy xuất dữ liệu hàng hóa và tồn kho thuộc phạm vi tương ứng.
+Từ các dữ liệu thu được, hệ thống tiến hành tính toán tổng lượng vàng đang tồn, tổng số món nữ trang, tổng số mẫu hàng và số mặt hàng đang ở mức cảnh báo sắp hết. Đồng thời, danh sách chi tiết của từng sản phẩm được hiển thị với các thông tin về mã tem, tên sản phẩm, loại vàng, trọng lượng, tiền công, vị trí lưu trữ và số lượng tồn kho.
+Trong quá trình sử dụng, người dùng có thể tìm kiếm hoặc lọc danh sách để nhanh chóng xác định mặt hàng cần tra cứu. Nếu thực hiện nhập kho, hệ thống tiếp nhận dữ liệu, kiểm tra tính hợp lệ và cập nhật số lượng hàng hóa sau khi nghiệp vụ hoàn tất. Khi số lượng tồn thay đổi, các chỉ số tổng quan và trạng thái cảnh báo cũng được cập nhật tương ứng.
+Màn hình quản lý nhân viên, tài khoản và phân quyền
+Hình 1.12: Phác thảo giao diện nhân sự
+Màn hình quản lý nhân viên được sử dụng để theo dõi thông tin nhân sự và tài khoản đang được cấp quyền sử dụng hệ thống. Phần tổng quan phía trên hiển thị tổng số tài khoản nhân sự, số tài khoản đang hoạt động và số nhóm vai trò hiện có. Các số liệu này giúp người quản lý nhanh chóng nắm được quy mô nhân sự và tình trạng sử dụng tài khoản trong hệ thống.
+Danh sách nhân viên bên dưới thể hiện các thông tin chính gồm họ và tên, tên đăng nhập, vai trò hoặc chức danh, chi nhánh làm việc, số điện thoại, trạng thái tài khoản và ngày tạo. Mỗi nhân viên được gắn với một vai trò cụ thể như quản trị viên, nhân viên quầy, thu ngân, thợ chế tác hoặc kế toán. Vai trò này là cơ sở để hệ thống xác định những chức năng mà tài khoản được phép sử dụng.
+Màn hình cũng hỗ trợ chức năng tìm kiếm theo họ tên, tên đăng nhập hoặc vai trò nhằm giúp người quản lý nhanh chóng xác định nhân viên cần tra cứu. Khi lựa chọn chức năng “Tạo tài khoản nhân viên”, hệ thống mở giao diện nhập thông tin mới và thực hiện kiểm tra dữ liệu trước khi lưu.
+Các điều kiện ràng buộc
+Tên đăng nhập của mỗi tài khoản phải bảo đảm tính duy nhất và không được trùng với tài khoản đã tồn tại trong hệ thống. Nhân viên phải được gán đúng doanh nghiệp, chi nhánh và vai trò tương ứng với phạm vi làm việc thực tế. Các thông tin bắt buộc như họ tên, tên đăng nhập và vai trò không được để trống.
+Trạng thái tài khoản phải thuộc các giá trị đã được hệ thống quy định. Chỉ các tài khoản đang ở trạng thái hoạt động mới được phép đăng nhập và sử dụng phần mềm. Đối với tài khoản đã bị khóa hoặc ngừng hoạt động, hệ thống phải từ chối yêu cầu đăng nhập.
+Việc tạo mới tài khoản, thay đổi vai trò, khóa tài khoản hoặc điều chỉnh quyền hạn chỉ được thực hiện bởi người dùng có quyền quản trị phù hợp. Điều này giúp hạn chế việc nhân viên tự thay đổi quyền hoặc truy cập những chức năng không thuộc trách nhiệm của mình.
+Mô tả luồng xử lý
+Khi người dùng truy cập chức năng Quản lý nhân viên, hệ thống kiểm tra quyền truy cập và xác định phạm vi doanh nghiệp hoặc chi nhánh mà tài khoản được phép quản lý. Sau đó, hệ thống truy xuất danh sách nhân viên tương ứng và hiển thị thông tin trên giao diện.
+Người quản lý có thể tìm kiếm nhân viên, xem trạng thái tài khoản hoặc thực hiện tạo mới. Khi tạo tài khoản nhân viên, hệ thống kiểm tra tính đầy đủ của dữ liệu, tính duy nhất của tên đăng nhập và vai trò được gán. Nếu thông tin hợp lệ, tài khoản được lưu vào hệ thống, liên kết với chi nhánh tương ứng và danh sách nhân viên được cập nhật lại.
+Màn hình quản lý bảng giá vàng
+Hình 1.13: Giao diện màn hình quản lý bảng giá vàng
+Màn hình quản lý bảng giá vàng được sử dụng để theo dõi và cập nhật giá mua vào, bán ra của từng loại vàng đang được áp dụng trong hệ thống. Đây là dữ liệu quan trọng vì bảng giá được sử dụng làm cơ sở tham chiếu cho các nghiệp vụ mua hàng, bán hàng và tính toán giá trị giao dịch.
+Tại giao diện, hệ thống hiển thị danh sách các loại vàng như Vàng miếng SJC 999.9, Nhẫn tròn 9999, Nữ trang 24K, Nữ trang 18K và Nữ trang 14K. Mỗi loại vàng đi kèm với giá mua vào, giá bán ra, đơn vị tính và thời điểm cập nhật gần nhất. Việc trình bày giá mua và giá bán riêng biệt giúp người dùng dễ dàng phân biệt mức giá áp dụng cho từng loại giao dịch.
+Giá mua vào và giá bán ra được quản lý dưới dạng dữ liệu số và phải lớn hơn hoặc bằng 0. Giá bán ra thông thường được quản lý độc lập với giá mua vào và chỉ được thay đổi bởi người dùng có quyền cập nhật bảng giá. Đơn vị tính phải thống nhất theo quy định của hệ thống, ví dụ như lượng, nhằm tránh sai lệch khi sử dụng dữ liệu giá trong các nghiệp vụ khác.
+Thời điểm cập nhật được hệ thống ghi nhận nhằm xác định tính mới của bảng giá. Khi giá vàng được thay đổi, hệ thống cần lưu lại thời điểm cập nhật tương ứng để người dùng có thể nhận biết giá hiện hành được thiết lập vào thời điểm nào.
+Màn hình cung cấp chức năng “Đồng bộ giá” để lấy hoặc cập nhật lại dữ liệu giá theo nguồn mà hệ thống được cấu hình. Sau khi đồng bộ, các giá trị mới cần được kiểm tra trước khi áp dụng nhằm hạn chế trường hợp dữ liệu thiếu, sai định dạng hoặc không phù hợp với danh mục loại vàng hiện có.
+Chức năng “Lưu bảng giá” được sử dụng để xác nhận các thay đổi của người dùng. Khi thực hiện lưu, hệ thống kiểm tra tính hợp lệ của giá mua, giá bán, loại vàng và các dữ liệu liên quan. Nếu thông tin hợp lệ, bảng giá mới được ghi nhận và trở thành dữ liệu tham chiếu cho các giao dịch phát sinh sau thời điểm cập nhật.
+Các điều kiện ràng buộc
+Mỗi loại vàng phải tồn tại trong danh mục được hệ thống quản lý và không được tạo nhiều dòng giá trùng nhau cho cùng một loại trong cùng phạm vi áp dụng. Giá mua vào và giá bán ra phải là dữ liệu số hợp lệ, không được để trống nếu loại vàng đang được sử dụng để thực hiện giao dịch và không được nhận giá trị âm.
+Việc cập nhật bảng giá chỉ được thực hiện bởi những tài khoản có quyền phù hợp. Người dùng không có quyền chỉnh sửa chỉ được xem dữ liệu hiện hành. Khi bảng giá được thay đổi, hệ thống cần bảo đảm dữ liệu mới được lưu chính xác và không làm thay đổi các giao dịch đã hoàn thành trước đó nếu nghiệp vụ không cho phép hồi tố giá.
+Mô tả luồng xử lý
+Khi người dùng truy cập chức năng Bảng giá vàng, hệ thống kiểm tra quyền truy cập và tải danh sách các loại vàng cùng mức giá đang được áp dụng. Người dùng có thể thực hiện đồng bộ dữ liệu giá hoặc chỉnh sửa các giá trị nếu được cấp quyền.
+Màn hình giao dịch bán hàng, mua hàng
+Hình 1.14: Phác thảo giao dịch bán hàng, mua hàng
+Màn hình bán hàng được sử dụng để thực hiện các giao dịch bán vàng bạc, trang sức cho khách hàng. Đây là một trong những chức năng nghiệp vụ chính của hệ thống, kết hợp dữ liệu từ hàng hóa, bảng giá vàng, tồn kho, thông tin khách hàng và phương thức thanh toán để hình thành một giao dịch hoàn chỉnh.
+Ở khu vực phía trên, hệ thống hiển thị nhanh giá mua và giá bán của một số loại vàng đang được áp dụng. Việc hiển thị bảng giá ngay trên màn hình bán hàng giúp nhân viên dễ dàng kiểm tra mức giá hiện hành trước khi lập giao dịch và hạn chế phải chuyển sang chức năng khác để tra cứu.
+Khu vực sản phẩm cho phép nhân viên tìm kiếm hàng hóa theo mã tem, mã sản phẩm hoặc tên sản phẩm. Sau khi lựa chọn, sản phẩm được đưa vào danh sách giao dịch với các thông tin như mã tem, tên sản phẩm, loại vàng, trọng lượng vàng, đơn giá, tiền công và thành tiền. Nhân viên có thể bổ sung nhiều sản phẩm vào cùng một giao dịch trước khi tiến hành thanh toán.
+Thành tiền của từng sản phẩm được hệ thống tính toán dựa trên thông tin hàng hóa, trọng lượng, mức giá đang áp dụng và các khoản chi phí liên quan. Tổng giá trị của tất cả các sản phẩm được cộng lại và hiển thị tại khu vực thanh toán để nhân viên và khách hàng có thể kiểm tra trước khi xác nhận giao dịch.
+Ở phía bên phải màn hình là khu vực Thông tin khách hàng. Nhân viên có thể nhập hoặc lựa chọn khách hàng tương ứng với giao dịch. Việc liên kết khách hàng với giao dịch giúp hệ thống lưu lại lịch sử mua hàng và hỗ trợ tra cứu các giao dịch đã phát sinh sau này.
+Khu vực Chi tiết thanh toán tổng hợp các khoản tiền của giao dịch và hiển thị tổng số tiền khách hàng phải thanh toán. Hệ thống hỗ trợ lựa chọn phương thức thanh toán như tiền mặt, chuyển khoản hoặc thanh toán qua POS. Nhân viên lựa chọn phương thức phù hợp trước khi xác nhận hoàn tất giao dịch.
+Khi người dùng thực hiện chức năng Thanh toán và in phiếu, hệ thống kiểm tra lại toàn bộ thông tin của giao dịch trước khi ghi nhận. Các sản phẩm phải tồn tại, còn đủ số lượng trong kho và nằm trong phạm vi chi nhánh mà nhân viên được phép bán. Dữ liệu giá và số tiền thanh toán cũng phải hợp lệ trước khi hệ thống cho phép hoàn thành giao dịch.
+Các điều kiện ràng buộc
+Sản phẩm được lựa chọn để bán phải tồn tại trong hệ thống và đang ở trạng thái cho phép giao dịch. Số lượng bán không được vượt quá số lượng tồn kho hiện tại. Đối với sản phẩm được quản lý riêng theo mã tem, một sản phẩm đã được bán hoặc không còn trong kho không được phép tiếp tục đưa vào một giao dịch mới.
+Giá bán phải được xác định từ bảng giá đang có hiệu lực hoặc từ quy tắc định giá đã được cấu hình trong hệ thống. Các giá trị như trọng lượng, đơn giá, tiền công và thành tiền phải là dữ liệu số hợp lệ và không được mang giá trị âm. Những giá trị được hệ thống tự động tính toán không được người dùng thay đổi tùy ý nếu không có quyền phù hợp.
+Thông tin khách hàng được nhập theo quy định của hệ thống. Trường hợp nghiệp vụ cho phép bán cho khách lẻ, khách hàng có thể không bắt buộc phải có tài khoản riêng; tuy nhiên, nếu người dùng nhập số điện thoại hoặc các thông tin nhận diện thì dữ liệu phải đúng định dạng.
+Phương thức thanh toán phải được lựa chọn trước khi hoàn tất giao dịch. Tổng số tiền thanh toán phải tương ứng với giá trị cuối cùng của giao dịch. Hệ thống không được ghi nhận giao dịch thành công nếu dữ liệu thanh toán không hợp lệ hoặc sản phẩm không còn đủ tồn kho.
+Mô tả luồng xử lý
+Khi nhân viên truy cập chức năng Bán hàng, hệ thống kiểm tra quyền của tài khoản và tải bảng giá cùng dữ liệu hàng hóa thuộc phạm vi chi nhánh hiện tại. Nhân viên tìm kiếm và lựa chọn sản phẩm cần bán, sau đó hệ thống truy xuất thông tin sản phẩm, kiểm tra tồn kho và tính toán giá trị tương ứng.
+Sau khi các sản phẩm được thêm vào giao dịch, hệ thống tổng hợp thành tiền, tiền công và các khoản liên quan để xác định tổng giá trị cần thanh toán. Nhân viên tiếp tục nhập thông tin khách hàng, lựa chọn phương thức thanh toán và kiểm tra lại toàn bộ nội dung giao dịch.
+Khi giao dịch được xác nhận, hệ thống lưu thông tin bán hàng, cập nhật giảm số lượng sản phẩm trong kho, ghi nhận doanh thu cho đúng chi nhánh và lưu dữ liệu phục vụ báo cáo. Sau cùng, hệ thống thông báo giao dịch thành công và có thể thực hiện in phiếu hoặc chứng từ bán hàng cho khách hàng.
+Màn hình báo cáo sổ quỹ
+Hình 1.15: Phác thảo giao diện báo cáo sổ quỹ tiền mặt
+Màn hình báo cáo sổ quỹ được sử dụng để theo dõi toàn bộ các khoản thu, chi và số tiền còn lại trong quỹ tại từng ca làm việc. Đây là chức năng hỗ trợ kiểm soát dòng tiền phát sinh trong quá trình kinh doanh, giúp người quản lý và thu ngân dễ dàng đối chiếu số tiền đầu ca, các khoản thu vào, các khoản chi ra và số dư quỹ tại thời điểm hiện tại.
+Tại khu vực tổng quan, hệ thống hiển thị các chỉ số chính gồm tiền tồn quỹ đầu ca, tổng thu trong ca, tổng chi trong ca và tiền tồn quỹ hiện tại. Trong giao diện minh họa, quỹ đầu ca là 50.000.000 đồng, tổng thu trong ca là 24.530.000 đồng, tổng chi là 17.690.000 đồng và số tiền tồn quỹ hiện tại là 56.840.000 đồng. Giá trị tồn quỹ hiện tại được hệ thống tính toán dựa trên số tiền đầu ca kết hợp với toàn bộ các khoản thu và chi đã được ghi nhận.
+Phía dưới khu vực tổng quan là danh sách các phiếu thu và phiếu chi phát sinh trong ca. Người dùng có thể xem toàn bộ giao dịch hoặc lọc riêng theo Phiếu thu và Phiếu chi. Mỗi phiếu được hiển thị với các thông tin gồm mã phiếu, thời gian phát sinh, loại phiếu, hạng mục thu hoặc chi, số tiền, đối tượng nộp hoặc nhận tiền, người lập phiếu và nội dung ghi chú. Cách tổ chức này giúp người quản lý dễ dàng xác định nguồn hình thành hoặc nguyên nhân thay đổi của số dư quỹ.
+Chức năng “Lập phiếu thu” được sử dụng khi phát sinh một khoản tiền đi vào quỹ, chẳng hạn tiền bán hàng hoặc một khoản thu khác. Ngược lại, chức năng “Lập phiếu chi” được sử dụng khi phát sinh khoản tiền ra khỏi quỹ như chi mua hàng, chi phí vận hành hoặc các khoản thanh toán khác. Sau khi phiếu được lập và xác nhận hợp lệ, hệ thống cập nhật tổng thu hoặc tổng chi và tính toán lại số dư quỹ hiện tại.
+Màn hình còn cung cấp chức năng “Kết ca & Bàn giao” nhằm phục vụ quá trình chốt quỹ khi kết thúc ca làm việc. Khi thực hiện kết ca, hệ thống tổng hợp toàn bộ phiếu thu, phiếu chi và số dư cuối ca để hỗ trợ thu ngân và người nhận bàn giao đối chiếu số liệu. Việc này giúp hạn chế sai lệch giữa số tiền thực tế và dữ liệu được ghi nhận trong hệ thống.
+Các điều kiện ràng buộc
+Mỗi phiếu thu hoặc phiếu chi phải có mã phiếu riêng, loại phiếu, số tiền, thời gian phát sinh và người lập phiếu. Số tiền của phiếu phải là giá trị hợp lệ và lớn hơn 0. Phiếu thu làm tăng số tiền trong quỹ, trong khi phiếu chi làm giảm số dư quỹ hiện tại.
+Các giao dịch thu hoặc chi sau khi được xác nhận phải được ghi nhận vào đúng ca làm việc và đúng phạm vi chi nhánh. Người dùng chỉ được phép lập hoặc quản lý phiếu nếu tài khoản có quyền phù hợp. Đối với các khoản chi, hệ thống cần kiểm soát để tránh phát sinh tình trạng số dư quỹ không đủ nếu quy tắc nghiệp vụ không cho phép âm quỹ.
+Số tiền tồn quỹ đầu ca, tổng thu, tổng chi và số dư hiện tại là các giá trị do hệ thống tổng hợp và không được chỉnh sửa tùy ý trên màn hình. Số dư hiện tại được xác định theo nguyên tắc:
+Tồn quỹ hiện tại = Tồn quỹ đầu ca + Tổng thu trong ca − Tổng chi trong ca.
+Mô tả luồng xử lý
+Khi người dùng truy cập chức năng Sổ quỹ, hệ thống xác định ca làm việc hiện tại và truy xuất các giao dịch thu, chi đã phát sinh. Từ dữ liệu này, hệ thống tính toán tổng số tiền thu vào, tổng số tiền chi ra và số dư quỹ hiện tại, sau đó hiển thị đồng thời cả thông tin tổng hợp và danh sách chi tiết từng phiếu.
+Trong quá trình làm việc, khi người dùng lập thêm phiếu thu hoặc phiếu chi, hệ thống kiểm tra dữ liệu trước khi lưu. Nếu giao dịch hợp lệ, phiếu được ghi nhận vào sổ quỹ và các chỉ số tổng hợp được cập nhật ngay theo số liệu mới. Khi kết thúc ca, chức năng Kết ca & Bàn giao được sử dụng để chốt số liệu và phục vụ quá trình đối chiếu giữa dữ liệu hệ thống với số tiền thực tế trong quỹ.
+Các module chính của chương trình
+Hệ thống quản lý vàng bạc được tổ chức thành nhiều module chức năng có nhiệm vụ riêng nhưng liên kết chặt chẽ với nhau trong quá trình vận hành. Việc phân chia theo module giúp hệ thống dễ quản lý, dễ mở rộng và thuận lợi cho quá trình kiểm thử. Mỗi module tiếp nhận dữ liệu từ người dùng hoặc từ các module khác, thực hiện xử lý theo các quy tắc nghiệp vụ và tạo ra kết quả tương ứng để hiển thị, lưu trữ hoặc tiếp tục cung cấp cho các chức năng khác.
+Do hệ thống được xây dựng theo mô hình phục vụ nhiều doanh nghiệp và nhiều chi nhánh, hầu hết các module đều phải làm việc trong một phạm vi dữ liệu xác định. Trước khi xử lý nghiệp vụ, hệ thống cần xác định người dùng đang thuộc doanh nghiệp nào, chi nhánh nào và có quyền thực hiện chức năng tương ứng hay không.
+Module xác thực và phân quyền
+Module xác thực và phân quyền là thành phần kiểm soát việc người dùng truy cập vào hệ thống. Đây là module được sử dụng ngay từ thời điểm người dùng đăng nhập và tiếp tục tham gia vào quá trình kiểm tra quyền ở các chức năng sau đó.
+Input của module gồm tên đăng nhập, mật khẩu, trạng thái tài khoản và các thông tin liên quan đến người dùng như vai trò, doanh nghiệp, chi nhánh và các quyền đã được cấp.
+Sau khi tiếp nhận dữ liệu đăng nhập, module kiểm tra sự tồn tại của tài khoản, xác thực mật khẩu và kiểm tra trạng thái hoạt động của người dùng. Nếu thông tin hợp lệ, hệ thống tiếp tục xác định vai trò và phạm vi quyền hạn. Các thông tin này được sử dụng để quyết định người dùng được phép truy cập chức năng nào, dữ liệu nào và thực hiện những thao tác nào.
+Output của module là kết quả xác thực, thông tin người dùng hiện tại, vai trò, quyền hạn và phạm vi dữ liệu được phép truy cập. Khi xác thực thất bại, hệ thống trả về thông báo phù hợp và không tạo phiên làm việc cho người dùng.
+Module này có vai trò xuyên suốt toàn bộ hệ thống bởi một thao tác không chỉ cần kiểm tra người dùng đã đăng nhập hay chưa mà còn phải xác định người dùng có đủ quyền thực hiện nghiệp vụ đó hay không.
+Module quản lý doanh nghiệp
+Module quản lý doanh nghiệp được sử dụng ở cấp công ty chủ quản nhằm quản lý các doanh nghiệp đang sử dụng phần mềm. Mỗi doanh nghiệp sau khi được tạo sẽ trở thành một phạm vi dữ liệu riêng trong hệ thống.
+Input của module gồm các thông tin như tên doanh nghiệp, mã số thuế, địa chỉ, số điện thoại, email, thông tin liên hệ và trạng thái hoạt động.
+Sau khi người quản trị nhập dữ liệu, hệ thống kiểm tra các trường bắt buộc, định dạng thông tin và khả năng trùng lặp. Đặc biệt, các thông tin dùng để nhận diện doanh nghiệp như mã số thuế cần được kiểm tra trước khi lưu. Khi dữ liệu hợp lệ, hệ thống thực hiện tạo mới hoặc cập nhật doanh nghiệp.
+Output của module là thông tin doanh nghiệp đã được lưu, danh sách các doanh nghiệp đang được quản lý và trạng thái hoạt động của từng doanh nghiệp. Dữ liệu doanh nghiệp sau đó trở thành cơ sở để các module chi nhánh, nhân viên, kho, hàng hóa và giao dịch xác định phạm vi sở hữu dữ liệu.
+Module quản lý chi nhánh
+Module quản lý chi nhánh được sử dụng để tổ chức hoạt động của một doanh nghiệp theo từng đơn vị trực thuộc. Mỗi chi nhánh luôn phải thuộc về một doanh nghiệp cụ thể.
+Input bao gồm mã chi nhánh, tên chi nhánh, địa chỉ, số điện thoại, người quản lý, trạng thái hoạt động và thông tin doanh nghiệp sở hữu chi nhánh.
+Khi dữ liệu được gửi lên, hệ thống kiểm tra tính hợp lệ của mã chi nhánh, thông tin người quản lý và mối liên hệ giữa chi nhánh với doanh nghiệp. Sau khi hợp lệ, chi nhánh được lưu vào hệ thống và có thể tiếp tục được gắn với kho hàng, nhân viên và các giao dịch phát sinh.
+Ngoài chức năng quản lý thông tin cơ bản, module này còn nhận dữ liệu từ các module khác để tổng hợp số lượng nhân sự và doanh thu của từng chi nhánh.
+Output gồm danh sách chi nhánh, thông tin chi tiết của từng đơn vị, trạng thái hoạt động, số nhân sự và các số liệu tổng hợp liên quan.
+Module quản lý kho
+Module quản lý kho chịu trách nhiệm theo dõi số lượng hàng hóa, trọng lượng vàng, vị trí lưu trữ và tình trạng tồn kho tại từng phạm vi quản lý.
+Input của module đến từ nhiều nguồn khác nhau, bao gồm thông tin hàng hóa, số lượng, trọng lượng, vị trí lưu trữ, nghiệp vụ nhập kho, bán hàng hoặc các nghiệp vụ làm thay đổi tồn kho.
+Sau khi tiếp nhận dữ liệu, hệ thống xác định sản phẩm thuộc kho nào, chi nhánh nào và doanh nghiệp nào. Khi có nghiệp vụ làm tăng hoặc giảm số lượng, module cập nhật tồn kho tương ứng. Đồng thời, hệ thống có thể tính toán tổng lượng vàng tồn, tổng số món trang sức, số mẫu hàng và những mặt hàng đã xuống dưới ngưỡng cảnh báo.
+Output của module bao gồm số lượng tồn hiện tại, tổng lượng vàng trong kho, vị trí lưu trữ của sản phẩm, trạng thái cảnh báo sắp hết và dữ liệu lịch sử biến động kho.
+Dữ liệu từ module kho được sử dụng trực tiếp trong quá trình bán hàng để xác định sản phẩm còn đủ số lượng hay không.
+Module quản lý hàng hóa
+Module quản lý hàng hóa chịu trách nhiệm lưu trữ và quản lý thông tin cơ bản của các sản phẩm vàng bạc, trang sức.
+Input có thể gồm mã tem, mã sản phẩm, tên sản phẩm, nhóm hàng, loại vàng, hàm lượng vàng, trọng lượng tổng, trọng lượng đá, trọng lượng vàng ròng, tiền công, trạng thái và các thông tin mô tả liên quan.
+Hệ thống kiểm tra tính hợp lệ của dữ liệu, đặc biệt đối với mã sản phẩm, loại vàng và các giá trị trọng lượng. Sau khi hợp lệ, sản phẩm được lưu và liên kết với phạm vi kho tương ứng. Những thông tin này sau đó được sử dụng làm dữ liệu đầu vào cho module bán hàng, mua hàng, kho và báo cáo.
+Output là hồ sơ hàng hóa đã được chuẩn hóa, danh sách sản phẩm và các dữ liệu phục vụ tìm kiếm, quản lý tồn kho và thực hiện giao dịch.
+Module quản lý nhân viên và tài khoản
+Module quản lý nhân viên chịu trách nhiệm quản lý thông tin nhân sự và tài khoản được phép sử dụng hệ thống.
+Input bao gồm họ tên, tên đăng nhập, số điện thoại, chức danh, vai trò, chi nhánh làm việc, trạng thái tài khoản và các thông tin liên quan.
+Hệ thống kiểm tra tính duy nhất của tên đăng nhập, xác định nhân viên thuộc doanh nghiệp và chi nhánh nào, sau đó gán vai trò phù hợp. Vai trò này được kết hợp với module phân quyền để xác định những chức năng mà nhân viên được phép sử dụng.
+Ví dụ, nhân viên quầy có thể được phép thực hiện nghiệp vụ bán hàng, trong khi kế toán có thể được cấp quyền liên quan đến sổ quỹ và báo cáo. Người quản trị có phạm vi quyền rộng hơn để thực hiện các chức năng quản lý tài khoản và cấu hình hệ thống.
+Output của module là danh sách nhân viên, thông tin tài khoản, vai trò, trạng thái và phạm vi làm việc của từng người dùng.
+Module quản lý bảng giá vàng
+Module quản lý bảng giá vàng cung cấp dữ liệu giá phục vụ trực tiếp cho các giao dịch mua và bán.
+Input gồm loại vàng, giá mua vào, giá bán ra, đơn vị tính và thời điểm cập nhật.
+Sau khi tiếp nhận dữ liệu, hệ thống kiểm tra các giá trị giá có hợp lệ hay không và liên kết mức giá với đúng loại vàng. Module có thể hỗ trợ nhập thủ công hoặc đồng bộ giá tùy theo cấu hình của hệ thống. Khi bảng giá mới được xác nhận, hệ thống lưu dữ liệu và ghi nhận thời gian cập nhật.
+Output của module là bảng giá hiện hành theo từng loại vàng. Dữ liệu này được chuyển sang module bán hàng hoặc mua hàng để làm cơ sở tính giá trị giao dịch.
+Bảng giá đã được sử dụng cho giao dịch hoàn tất cần được quản lý cẩn thận nhằm tránh việc thay đổi giá hiện tại làm sai lệch dữ liệu lịch sử.
+Module bán hàng
+Module bán hàng là một trong những module nghiệp vụ trung tâm của hệ thống, chịu trách nhiệm xử lý quá trình bán vàng bạc và trang sức cho khách hàng.
+Input gồm sản phẩm được lựa chọn, số lượng, trọng lượng, thông tin bảng giá, tiền công, thông tin khách hàng và phương thức thanh toán.
+Khi nhân viên lựa chọn sản phẩm, module bán hàng lấy dữ liệu từ module hàng hóa và kiểm tra tồn kho thông qua module kho. Đồng thời, giá bán hiện hành được lấy từ module bảng giá. Hệ thống tính toán giá trị của từng sản phẩm và tổng giá trị giao dịch.
+Trước khi xác nhận, hệ thống kiểm tra lại số lượng tồn và quyền của người thực hiện. Khi giao dịch thành công, thông tin bán hàng được lưu, số lượng trong kho được giảm và dữ liệu doanh thu được chuyển đến module báo cáo.
+Output gồm thông tin giao dịch bán hàng, tổng tiền thanh toán, chứng từ hoặc phiếu bán hàng, tồn kho sau giao dịch và dữ liệu doanh thu.
+Module mua hàng
+Module mua hàng được sử dụng khi doanh nghiệp nhập hàng hoặc thực hiện nghiệp vụ mua lại vàng, trang sức.
+Input gồm thông tin sản phẩm, loại vàng, trọng lượng, số lượng, giá mua, thông tin người bán hoặc khách hàng và các dữ liệu liên quan đến giao dịch.
+Hệ thống kiểm tra loại vàng, trọng lượng và mức giá mua đang được áp dụng. Sau đó giá trị giao dịch được tính toán và hiển thị để người dùng kiểm tra trước khi xác nhận.
+Khi giao dịch được hoàn tất, hệ thống lưu thông tin mua hàng và cập nhật các dữ liệu có liên quan. Nếu hàng hóa sau giao dịch được đưa vào kho, module mua hàng gửi dữ liệu sang module kho để bổ sung số lượng hoặc tạo thông tin hàng hóa mới.
+Output gồm thông tin giao dịch mua, số tiền phải chi, dữ liệu hàng hóa mới hoặc cập nhật và số lượng tồn kho sau giao dịch.
+Module quản lý khách hàng
+Module quản lý khách hàng lưu trữ các thông tin cần thiết của những khách hàng đã hoặc đang phát sinh giao dịch với doanh nghiệp.
+Input có thể bao gồm họ tên, số điện thoại, địa chỉ và các thông tin nhận diện khác theo yêu cầu của hệ thống.
+Hệ thống kiểm tra dữ liệu, lưu thông tin khách hàng và liên kết khách hàng với các giao dịch mua hoặc bán tương ứng. Việc liên kết này giúp hệ thống có thể tra cứu lại lịch sử giao dịch của từng khách hàng khi cần thiết.
+Output gồm hồ sơ khách hàng, thông tin liên hệ và lịch sử các giao dịch liên quan.
+Module sổ quỹ
+Module sổ quỹ chịu trách nhiệm quản lý dòng tiền thu và chi trong từng ca làm việc.
+Input gồm số dư đầu ca, phiếu thu, phiếu chi, số tiền, hạng mục thu hoặc chi, đối tượng nộp hoặc nhận tiền, người lập phiếu và ghi chú.
+Khi phát sinh một khoản thu, hệ thống ghi nhận phiếu thu và tăng số tiền trong quỹ. Khi phát sinh khoản chi, hệ thống ghi nhận phiếu chi và giảm số dư quỹ. Mỗi giao dịch tài chính phải được ghi nhận vào đúng ca làm việc và đúng chi nhánh.
+Số tiền tồn quỹ hiện tại được hệ thống tính toán dựa trên số dư đầu ca, tổng thu và tổng chi theo công thức:
+Tồn quỹ hiện tại = Tồn quỹ đầu ca + Tổng thu − Tổng chi.
+Module cũng hỗ trợ chức năng kết ca và bàn giao nhằm đối chiếu giữa số liệu trên hệ thống và số tiền thực tế.
+Output gồm danh sách phiếu thu, phiếu chi, tổng thu trong ca, tổng chi trong ca, số dư quỹ hiện tại và dữ liệu phục vụ đối soát.
+Module báo cáo và thống kê
+Module báo cáo và thống kê có nhiệm vụ tổng hợp dữ liệu từ các module nghiệp vụ khác để cung cấp thông tin phục vụ quản lý.
+Input của module được lấy từ các giao dịch mua bán, hàng hóa, tồn kho, chi nhánh, khách hàng và sổ quỹ. Người dùng có thể bổ sung các điều kiện như khoảng thời gian, chi nhánh hoặc loại báo cáo cần xem.
+Sau khi tiếp nhận yêu cầu, hệ thống kiểm tra quyền truy cập, xác định phạm vi dữ liệu và truy xuất các bản ghi liên quan. Dữ liệu được tổng hợp và tính toán trước khi hiển thị cho người dùng.
+Output có thể bao gồm báo cáo doanh thu, báo cáo giao dịch mua bán, báo cáo tồn kho, báo cáo thu chi và các thống kê theo chi nhánh hoặc khoảng thời gian.
+Dữ liệu báo cáo phải tuân theo phạm vi phân quyền. Người quản lý doanh nghiệp có thể xem dữ liệu tổng hợp của các chi nhánh trực thuộc nếu được cấp quyền, trong khi người dùng ở cấp chi nhánh chỉ được xem dữ liệu trong phạm vi của mình.
+Mối quan hệ giữa các module
+Các module trong hệ thống có sự phụ thuộc và trao đổi dữ liệu với nhau trong quá trình thực hiện nghiệp vụ. Một module thường không thể hoàn thành toàn bộ nghiệp vụ chỉ dựa trên dữ liệu của chính nó.
+Ví dụ, khi nhân viên thực hiện một giao dịch bán hàng, trước tiên module xác thực và phân quyền kiểm tra tài khoản có được phép bán hàng tại chi nhánh hiện tại hay không. Module bán hàng tiếp tục lấy thông tin sản phẩm từ module hàng hóa, kiểm tra số lượng thông qua module kho và lấy giá hiện hành từ module bảng giá vàng. Nếu khách hàng đã có thông tin trong hệ thống, module khách hàng được sử dụng để liên kết giao dịch với người mua.
+Sau khi giao dịch được xác nhận, module bán hàng lưu dữ liệu giao dịch và yêu cầu module kho cập nhật giảm số lượng hàng hóa. Khoản tiền thu phát sinh có thể được ghi nhận vào module sổ quỹ, trong khi dữ liệu giao dịch được chuyển đến module báo cáo để tổng hợp doanh thu.
+Tương tự, khi phát sinh giao dịch mua hàng, module mua hàng lấy dữ liệu giá từ bảng giá, ghi nhận giao dịch, cập nhật hàng hóa vào kho và tạo dữ liệu chi liên quan nếu nghiệp vụ yêu cầu. Nhờ sự liên kết này, dữ liệu giữa các chức năng được duy trì thống nhất và phản ánh đầy đủ quá trình hoạt động của doanh nghiệp.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+Tổng quan về kiểm thử phần mềm
+Khái niệm kiểm thử phần mềm
+Kiểm thử phần mềm (Software Testing) là quá trình đánh giá một sản phẩm phần mềm nhằm xác định mức độ đáp ứng của hệ thống đối với các yêu cầu đã được đặt ra, đồng thời phát hiện những sai sót có thể xuất hiện trong quá trình thiết kế, phát triển và vận hành phần mềm. Đây là một hoạt động quan trọng trong quá trình phát triển phần mềm bởi một hệ thống có thể hoạt động bình thường trong một số trường hợp nhưng vẫn tồn tại lỗi khi gặp những dữ liệu, điều kiện hoặc tình huống sử dụng khác nhau.
+Về bản chất, kiểm thử phần mềm không đơn thuần là việc chạy chương trình để xem chương trình có hoạt động hay không. Quá trình kiểm thử cần được thực hiện một cách có kế hoạch, dựa trên yêu cầu và đặc tả của hệ thống. Người kiểm thử xây dựng các điều kiện kiểm thử, chuẩn bị dữ liệu đầu vào, thực hiện các bước kiểm thử và so sánh kết quả thực tế của chương trình với kết quả mong đợi. Khi kết quả thực tế khác với kết quả đã được xác định trong yêu cầu, sự khác biệt đó có thể là dấu hiệu của một lỗi cần được phân tích và xử lý.
+Quá trình kiểm thử có thể được mô tả theo quan hệ:
+Hình 2.16: Quy trình cơ bản của hoạt động kiểm thử phần mềm
+Một điểm cần lưu ý là kiểm thử không thể chứng minh tuyệt đối rằng một phần mềm hoàn toàn không còn lỗi. Trong thực tế, số lượng trạng thái, dữ liệu đầu vào và tình huống sử dụng của một hệ thống có thể rất lớn, khiến việc kiểm tra toàn bộ mọi trường hợp gần như không khả thi. Vì vậy, hoạt động kiểm thử thường tập trung vào những chức năng quan trọng, những khu vực có mức độ rủi ro cao và những trường hợp có khả năng phát sinh lỗi lớn.
+Kiểm thử cũng không chỉ được thực hiện sau khi phần mềm đã hoàn thành. Trong một quy trình phát triển phần mềm phù hợp, hoạt động kiểm thử có thể bắt đầu từ sớm, chẳng hạn bằng việc xem xét yêu cầu, phân tích đặc tả và thiết kế các trường hợp kiểm thử trước khi chức năng được hoàn thiện. Việc phát hiện vấn đề ở giai đoạn sớm giúp giảm chi phí sửa lỗi và hạn chế ảnh hưởng của lỗi đến các thành phần khác trong hệ thống.
+Trong quá trình kiểm thử, có thể phân biệt ba khái niệm có liên quan. Error là sai sót do con người tạo ra trong quá trình phân tích, thiết kế hoặc lập trình. Sai sót này có thể dẫn đến Defect/Bug, tức một khiếm khuyết tồn tại trong sản phẩm phần mềm. Khi khiếm khuyết đó được kích hoạt trong quá trình chạy chương trình và khiến hệ thống cho ra kết quả không đúng hoặc không thể thực hiện chức năng dự kiến, hiện tượng đó được gọi là Failure. Việc phân biệt các khái niệm này giúp người kiểm thử mô tả và phân tích lỗi một cách chính xác hơn.
+Đối với hệ thống quản lý vàng bạc, trang sức được nghiên cứu trong đề tài, kiểm thử có vai trò đặc biệt quan trọng vì phần mềm xử lý nhiều loại dữ liệu có ảnh hưởng trực tiếp đến hoạt động kinh doanh như hàng hóa, trọng lượng vàng, bảng giá, tồn kho, giao dịch mua bán và doanh thu. Ngoài tính chính xác của dữ liệu, hệ thống còn phải bảo đảm người dùng chỉ có thể truy cập các chức năng và dữ liệu nằm trong phạm vi quyền hạn của mình. Một sai sót trong tính toán giá trị giao dịch, cập nhật tồn kho hoặc kiểm soát phân quyền đều có thể làm dữ liệu quản lý bị sai lệch.
+Do đó, kiểm thử phần mềm trong đề tài không chỉ hướng đến việc xác định các chức năng có hoạt động theo yêu cầu hay không, mà còn nhằm kiểm tra sự phối hợp giữa các module, khả năng xử lý những dữ liệu không hợp lệ, việc kiểm soát quyền truy cập và tính nhất quán của dữ liệu sau khi các nghiệp vụ được thực hiện.
+Mục tiêu của kiểm thử phần mềm
+Kiểm thử phần mềm được thực hiện nhằm đánh giá mức độ đáp ứng của sản phẩm đối với các yêu cầu đã xác định, đồng thời phát hiện những sai sót có thể ảnh hưởng đến quá trình sử dụng hệ thống. Mục tiêu của kiểm thử không chỉ dừng lại ở việc tìm ra lỗi, mà còn hướng tới việc cung cấp thông tin về chất lượng phần mềm để nhóm phát triển và các bên liên quan có cơ sở đánh giá mức độ sẵn sàng của hệ thống trước khi đưa vào sử dụng thực tế.
+Hình 2.17: Các mục tiêu chính của kiểm thử phần mềm
+Một trong những mục tiêu quan trọng nhất của kiểm thử là phát hiện lỗi và các hành vi không phù hợp với yêu cầu. Trong quá trình phát triển, sai sót có thể xuất hiện từ nhiều nguyên nhân như hiểu chưa đúng yêu cầu nghiệp vụ, thiết kế chưa phù hợp, xử lý logic chưa đầy đủ hoặc lập trình chưa chính xác. Thông qua việc xây dựng các trường hợp kiểm thử với nhiều loại dữ liệu và tình huống khác nhau, người kiểm thử có thể phát hiện những trường hợp mà kết quả thực tế của hệ thống khác với kết quả mong đợi.
+Bên cạnh việc phát hiện lỗi, kiểm thử còn nhằm xác minh phần mềm có được xây dựng đúng theo đặc tả hay không. Mỗi chức năng của hệ thống đều được hình thành từ một hoặc nhiều yêu cầu nghiệp vụ. Vì vậy, khi kiểm thử cần xác định chức năng đó có xử lý đúng dữ liệu đầu vào, thực hiện đúng quy tắc nghiệp vụ và trả về kết quả phù hợp hay không. Việc này giúp hạn chế tình trạng một chức năng hoạt động về mặt kỹ thuật nhưng lại không giải quyết đúng bài toán mà người sử dụng cần.
+Kiểm thử cũng góp phần đánh giá mức độ ổn định và độ tin cậy của hệ thống. Một chức năng có thể hoạt động đúng trong điều kiện thông thường nhưng phát sinh lỗi khi nhận dữ liệu bất thường, khi nhiều chức năng tương tác với nhau hoặc khi người dùng thực hiện thao tác không theo luồng dự kiến. Việc kiểm thử trên nhiều điều kiện khác nhau giúp phát hiện những điểm chưa ổn định và giảm nguy cơ lỗi xuất hiện trong quá trình
+vận hành thực tế.
+Một mục tiêu khác là giảm thiểu rủi ro trước khi phần mềm được triển khai. Không phải mọi lỗi đều có mức độ ảnh hưởng giống nhau. Có những lỗi chỉ làm sai cách hiển thị thông tin, nhưng cũng có những lỗi có thể làm sai dữ liệu giao dịch, mất dữ liệu, tính toán không chính xác hoặc cho phép người dùng truy cập vào những chức năng không thuộc quyền hạn. Vì vậy, kiểm thử giúp nhóm phát triển nhận diện những khu vực có mức độ rủi ro cao để ưu tiên xử lý trước khi hệ thống được đưa vào sử dụng.
+Đối với hệ thống quản lý vàng bạc, trang sức trong đề tài, mục tiêu kiểm thử càng có ý nghĩa do hệ thống trực tiếp xử lý các dữ liệu liên quan đến hàng hóa, trọng lượng vàng, giá vàng, tồn kho, giao dịch mua bán và doanh thu. Chẳng hạn, khi một giao dịch bán hàng được thực hiện, hệ thống không chỉ cần lưu được giao dịch mà còn phải tính toán đúng giá trị thanh toán, cập nhật đúng số lượng tồn kho và bảo đảm dữ liệu được ghi nhận tại đúng doanh nghiệp, chi nhánh và kho tương ứng.
+Tương tự, cơ chế phân quyền cũng là một nội dung cần được kiểm thử kỹ. Hệ thống phải bảo đảm rằng người dùng được phép thực hiện đúng những chức năng cần thiết cho công việc của mình, đồng thời không thể truy cập dữ liệu hoặc thao tác ngoài phạm vi được cấp quyền. Điều này đặc biệt quan trọng trong hệ thống phục vụ nhiều doanh nghiệp vì một lỗi phân quyền có thể dẫn đến việc dữ liệu của doanh nghiệp này bị truy cập bởi người dùng thuộc doanh nghiệp khác.
+Ngoài ra, kết quả kiểm thử còn cung cấp cơ sở để nhóm phát triển đánh giá mức độ hoàn thiện của phần mềm. Thông qua số lượng test case đã thực hiện, tỷ lệ đạt và không đạt, số lượng lỗi phát hiện cũng như mức độ nghiêm trọng của từng lỗi, nhóm có thể xác định những chức năng nào đã ổn định và những khu vực nào vẫn cần tiếp tục hoàn thiện.
+Như vậy, có thể xem mục tiêu tổng quát của kiểm thử phần mềm là phát hiện sai sót, xác minh sự phù hợp với yêu cầu, đánh giá chất lượng và giảm thiểu rủi ro của hệ thống trước khi đưa vào sử dụng. Kiểm thử không bảo đảm rằng phần mềm hoàn toàn không còn lỗi, nhưng giúp nâng cao mức độ tin cậy và cung cấp những bằng chứng cần thiết để đánh giá chất lượng của sản phẩm.
+Vai trò của kiểm thử trong phát triển phần mềm
+Trong quá trình phát triển phần mềm, kiểm thử giữ vai trò quan trọng trong việc kiểm soát chất lượng của sản phẩm trước khi được đưa đến người sử dụng. Một hệ thống có thể được xây dựng đúng về mặt kỹ thuật nhưng vẫn chưa đáp ứng đầy đủ yêu cầu nghiệp vụ hoặc có thể phát sinh lỗi trong những tình huống sử dụng cụ thể. Vì vậy, kiểm thử giúp tạo ra một cơ chế đánh giá độc lập hơn đối với cách phần mềm thực sự hoạt động so với những gì đã được thiết kế và mong đợi.
+Hình 2.18: Vai trò của kiểm thử trong vòng đời phát triển phần mềm
+Trước hết, kiểm thử giúp phát hiện sớm các sai sót trong quá trình phát triển. Lỗi phần mềm có thể xuất hiện từ nhiều giai đoạn khác nhau, từ việc hiểu chưa chính xác yêu cầu, thiết kế luồng xử lý chưa đầy đủ cho đến lỗi trong quá trình lập trình. Nếu những sai sót này chỉ được phát hiện khi hệ thống đã triển khai thực tế, việc sửa chữa thường phức tạp hơn và có thể ảnh hưởng đến nhiều thành phần khác. Việc đưa hoạt động kiểm thử vào sớm trong vòng đời phát triển giúp nhóm dự án nhận biết vấn đề trước khi chúng lan rộng sang các chức năng liên quan.
+Kiểm thử còn đóng vai trò xác nhận sự phù hợp giữa sản phẩm và yêu cầu nghiệp vụ. Trong một hệ thống phần mềm, việc một chức năng có thể chạy được chưa đồng nghĩa với việc chức năng đó đã xử lý đúng theo yêu cầu. Thông qua các trường hợp kiểm thử được xây dựng từ đặc tả, nhóm kiểm thử có thể đối chiếu kết quả thực tế với kết quả mong đợi, từ đó đánh giá phần mềm có thực hiện đúng chức năng mà người dùng cần hay không.
+Một vai trò quan trọng khác của kiểm thử là hạn chế rủi ro trong quá trình vận hành. Không phải tất cả các lỗi đều có mức độ ảnh hưởng giống nhau. Một số lỗi chỉ liên quan đến giao diện, nhưng cũng có những lỗi tác động trực tiếp đến dữ liệu, giao dịch, phân quyền hoặc khả năng hoạt động của toàn bộ hệ thống. Thông qua kiểm thử, các lỗi có mức độ nghiêm trọng cao có thể được phát hiện và ưu tiên xử lý trước khi sản phẩm được đưa vào môi trường thực tế.
+Bên cạnh đó, kiểm thử giúp duy trì tính ổn định khi phần mềm được thay đổi hoặc mở rộng. Trong quá trình phát triển, một chức năng mới được bổ sung hoặc một đoạn chương trình cũ được chỉnh sửa có thể vô tình ảnh hưởng đến những chức năng trước đó. Do đó, việc thực hiện kiểm thử lại và kiểm thử hồi quy giúp xác định rằng các chức năng đã hoạt động ổn định vẫn tiếp tục hoạt động đúng sau những thay đổi của hệ thống.
+Kiểm thử cũng là cầu nối quan trọng giữa các thành viên tham gia phát triển phần mềm. Kết quả kiểm thử cung cấp thông tin cụ thể cho lập trình viên về điều kiện phát sinh lỗi, dữ liệu sử dụng, kết quả thực tế và kết quả mong đợi. Đồng thời, các báo cáo kiểm thử giúp người quản lý dự án có cơ sở để theo dõi chất lượng của sản phẩm và xác định những phần còn cần được hoàn thiện.
+Đối với hệ thống quản lý vàng bạc, trang sức trong đề tài, vai trò của kiểm thử càng trở nên rõ ràng do hệ thống xử lý nhiều loại dữ liệu có giá trị và có mối liên hệ chặt chẽ với nhau. Ví dụ, một giao dịch bán hàng thành công không chỉ yêu cầu lưu đúng thông tin hóa đơn mà còn phải cập nhật chính xác tồn kho, áp dụng đúng bảng giá và ghi nhận đúng doanh thu của chi nhánh tương ứng. Nếu một trong các bước này xảy ra sai sót, dữ liệu quản lý có thể bị mất tính nhất quán.
+Tương tự, hệ thống được xây dựng để phục vụ nhiều doanh nghiệp nên việc kiểm thử cơ chế phân quyền có vai trò đặc biệt quan trọng. Người dùng của một doanh nghiệp không được phép truy cập dữ liệu của doanh nghiệp khác; nhân viên tại một chi nhánh cũng chỉ được thao tác trong phạm vi quyền đã được cấp. Việc kiểm thử những trường hợp truy cập trái quyền giúp đánh giá khả năng bảo vệ dữ liệu và hạn chế các thao tác không hợp lệ.
+Như vậy, kiểm thử không phải là một hoạt động chỉ được thực hiện ở cuối quá trình phát triển mà cần được xem là một phần xuyên suốt trong vòng đời phần mềm. Từ giai đoạn phân tích yêu cầu, thiết kế, lập trình cho đến triển khai và bảo trì, hoạt động kiểm thử góp phần phát hiện sai sót, kiểm soát rủi ro, duy trì tính ổn định và cung cấp cơ sở để đánh giá
+chất lượng của sản phẩm trước khi đưa vào sử dụng.
+Các mức độ kiểm thử phần mềm
+Unit Testing
+Unit Testing (kiểm thử đơn vị) là mức kiểm thử tập trung vào những thành phần nhỏ nhất có thể kiểm tra độc lập trong chương trình, chẳng hạn một hàm, phương thức, lớp hoặc một phần xử lý nghiệp vụ cụ thể. Mục đích của Unit Testing là xác định từng đơn vị chương trình có xử lý đúng dữ liệu đầu vào và trả về kết quả đúng theo thiết kế hay không trước khi được kết hợp với các thành phần khác của hệ thống.
+Trong quá trình phát triển phần mềm, Unit Testing thường được thực hiện ở giai đoạn sớm và có mối liên hệ chặt chẽ với quá trình lập trình. Thay vì chờ toàn bộ hệ thống hoàn thiện mới tiến hành kiểm tra, lập trình viên có thể kiểm thử từng chức năng ngay sau khi xây dựng. Cách tiếp cận này giúp phát hiện các sai sót về thuật toán, điều kiện rẽ nhánh, xử lý dữ liệu hoặc tính toán nghiệp vụ ngay tại nơi lỗi phát sinh.
+Một Unit Test thường được xây dựng dựa trên ba yếu tố chính: dữ liệu đầu vào, thao tác xử lý và kết quả mong đợi. Người kiểm thử chuẩn bị một tập dữ liệu xác định, gọi hàm hoặc phương thức cần kiểm thử, sau đó so sánh kết quả thực tế với kết quả đã được kỳ vọng. Nếu hai kết quả trùng khớp, test case được xem là đạt; ngược lại, cần phân tích nguyên nhân để xác định lỗi trong đơn vị chương trình.
+Ví dụ, trong hệ thống quản lý vàng bạc, có thể tồn tại một phương thức tính thành tiền của sản phẩm dựa trên trọng lượng vàng, đơn giá và tiền công. Khi kiểm thử phương thức này, dữ liệu đầu vào được chuẩn bị trước, chẳng hạn trọng lượng, giá vàng và tiền công; kết quả do chương trình tính toán sẽ được so sánh với giá trị mong đợi. Qua đó có thể xác định riêng phần logic tính toán đã hoạt động chính xác hay chưa mà không cần thực hiện toàn bộ quy trình bán hàng.
+Unit Testing cũng đặc biệt hữu ích đối với các hàm có nhiều điều kiện xử lý. Chẳng hạn, chức năng kiểm tra số lượng tồn kho phải xử lý đúng các trường hợp số lượng yêu cầu nhỏ hơn tồn kho, bằng tồn kho, lớn hơn tồn kho hoặc dữ liệu đầu vào không hợp lệ. Việc kiểm thử từng trường hợp giúp phát hiện những nhánh xử lý còn thiếu hoặc chưa chính xác.
+Để bảo đảm một Unit Test tập trung đúng vào thành phần cần kiểm tra, các phụ thuộc bên ngoài thường được hạn chế hoặc thay thế bằng những đối tượng giả lập như Mock hoặc Stub. Ví dụ, khi kiểm thử một service xử lý giao dịch, việc kiểm tra không nhất thiết phải phụ thuộc trực tiếp vào cơ sở dữ liệu thật. Thành phần truy xuất dữ liệu có thể được giả lập để chủ động xác định dữ liệu trả về, qua đó chỉ tập trung đánh giá logic của service đang được kiểm thử.
+Trong thực tế, Unit Testing thường được kết hợp với các kỹ thuật thiết kế test case để nâng cao khả năng phát hiện lỗi. Các kỹ thuật như phân vùng tương đương (Equivalence Partitioning), phân tích giá trị biên (Boundary Value Analysis) hoặc đánh giá độ bao phủ câu lệnh và nhánh có thể được áp dụng tùy theo đặc điểm của từng đơn vị chương trình. Đây cũng là những kỹ thuật được đề cương của bài báo cáo yêu cầu xem xét trong phần Unit Test.
+Đối với phần mềm quản lý vàng bạc trong đề tài, Unit Testing có thể được áp dụng cho các nhóm xử lý như xác thực dữ liệu người dùng, kiểm tra quyền truy cập, tính giá giao dịch, tính tiền công, kiểm tra tồn kho, cập nhật số lượng sản phẩm và các phép tính phục vụ thống kê. Việc kiểm tra tốt các đơn vị này giúp hạn chế lỗi lan truyền sang những nghiệp vụ lớn hơn khi các module được tích hợp với nhau.
+Có thể khái quát quá trình Unit Testing như sau:
+Hình 2.19: Quy trình thực hiện Unit Testing
+Integration Testing
+Integration Testing (kiểm thử tích hợp) là mức kiểm thử tập trung vào việc đánh giá sự tương tác giữa hai hoặc nhiều module sau khi các thành phần riêng lẻ đã được kiểm tra ở mức Unit Test. Mục tiêu của kiểm thử tích hợp không chỉ là xác định từng module có hoạt động đúng hay không, mà quan trọng hơn là kiểm tra dữ liệu có được truyền đúng giữa các module, các thành phần có phối hợp đúng với nhau và toàn bộ luồng nghiệp vụ có cho ra kết quả như mong đợi hay không.
+Trong đề cương của bài báo cáo, Integration Testing được yêu cầu tập trung vào giao tiếp giữa các module, đồng thời cần chỉ rõ những module được tích hợp, dữ liệu truyền giữa chúng, các điều kiện xử lý và kết quả mong đợi. Đề cương cũng gợi ý một số phương pháp kiểm thử tích hợp như Top-down, Bottom-up, Big Bang và Incremental.
+Trong một hệ thống thực tế, các module hiếm khi hoạt động hoàn toàn độc lập. Một chức năng thường cần dữ liệu hoặc kết quả xử lý từ nhiều thành phần khác nhau. Vì vậy, mặc dù từng module có thể vượt qua Unit Test, lỗi vẫn có thể xuất hiện khi các module được kết nối với nhau. Những lỗi thường gặp ở giai đoạn này có thể liên quan đến cấu trúc dữ liệu không thống nhất, sai định dạng dữ liệu truyền vào, sai thứ tự xử lý, thiếu dữ liệu, lỗi giao tiếp với cơ sở dữ liệu hoặc một module không xử lý đúng kết quả trả về từ module khác.
+Đối với hệ thống quản lý vàng bạc, trang sức trong đề tài, nghiệp vụ bán hàng là một ví dụ rõ ràng về sự phối hợp giữa nhiều module. Khi nhân viên lựa chọn một sản phẩm để bán, module bán hàng cần lấy thông tin sản phẩm từ module quản lý hàng hóa, kiểm tra số lượng thông qua module tồn kho, lấy giá hiện hành từ module bảng giá và kiểm tra quyền của người dùng thông qua module xác thực và phân quyền. Khi giao dịch được xác nhận, dữ liệu tiếp tục được chuyển sang module tồn kho để giảm số lượng hàng hóa và sang module báo cáo để phục vụ tổng hợp doanh thu.
+Có thể mô tả sự tích hợp của nghiệp vụ này như sau:
+Module xác thực và phân quyền → Module bán hàng → Module hàng hóa → Module bảng giá → Module tồn kho → Module giao dịch → Module báo cáo.
+Nếu từng module hoạt động đúng nhưng dữ liệu trao đổi giữa chúng sai, giao dịch vẫn có thể cho kết quả không chính xác. Chẳng hạn, module bảng giá trả về đúng giá vàng nhưng module bán hàng lấy nhầm giá bán thành giá mua; module bán hàng lưu giao dịch thành công nhưng module tồn kho không giảm số lượng; hoặc giao dịch được lưu cho đúng khách hàng nhưng lại ghi nhận vào sai chi nhánh. Đây chính là những loại lỗi mà Integration Testing cần phát hiện.
+Kiểm thử tích hợp cũng đặc biệt quan trọng đối với hệ thống có mô hình nhiều doanh nghiệp. Khi dữ liệu được truyền từ module này sang module khác, các thông tin xác định phạm vi như doanh nghiệp, chi nhánh và kho cần được giữ nhất quán. Nếu một yêu cầu bắt đầu tại chi nhánh A nhưng dữ liệu tồn kho lại được cập nhật tại chi nhánh B, hệ thống có thể tạo ra sai lệch nghiêm trọng mặc dù từng module riêng lẻ vẫn xử lý đúng về mặt kỹ thuật.
+Các phương pháp Integration Testing
+Top-down Integration Testing bắt đầu từ các module ở mức cao của hệ thống rồi lần lượt tích hợp xuống các module thấp hơn. Những thành phần chưa được xây dựng hoặc chưa sẵn sàng có thể được thay thế tạm thời bằng Stub. Phương pháp này cho phép kiểm tra sớm các luồng điều khiển chính của hệ thống.
+Ngược lại, Bottom-up Integration Testing bắt đầu từ các module ở mức thấp, sau đó từng bước tích hợp lên các module ở mức cao hơn. Trong trường hợp module cấp trên chưa sẵn sàng, Driver có thể được sử dụng để mô phỏng lời gọi từ thành phần phía trên.
+Big Bang Integration Testing thực hiện bằng cách kết hợp nhiều hoặc toàn bộ module cùng lúc rồi tiến hành kiểm thử. Cách này tương đối đơn giản khi số lượng module ít, nhưng khi xảy ra lỗi sẽ khó xác định chính xác nguyên nhân xuất phát từ thành phần nào.
+Incremental Integration Testing thực hiện tích hợp từng module hoặc từng nhóm module theo từng bước. Sau mỗi lần tích hợp, hệ thống được kiểm thử trước khi tiếp tục bổ sung thành phần mới. Cách tiếp cận này giúp khoanh vùng lỗi dễ dàng hơn và phù hợp với những hệ thống có nhiều module liên kết với nhau.
+Với hệ thống quản lý vàng bạc của đề tài, cách tiếp cận Incremental khá phù hợp về mặt mô tả kiểm thử vì có thể kiểm tra từng chuỗi tích hợp theo nghiệp vụ. Chẳng hạn, trước tiên kiểm tra Đăng nhập → Phân quyền, sau đó kiểm tra Hàng hóa → Kho, tiếp theo là Bảng giá → Bán hàng, rồi mới kiểm tra toàn bộ chuỗi Bán hàng → Tồn kho → Báo cáo.
+Một Integration Test thường bắt đầu bằng việc xác định các module cần kiểm tra và dữ liệu được trao đổi giữa chúng. Sau đó hệ thống thực hiện nghiệp vụ, theo dõi dữ liệu đi qua các thành phần và kiểm tra kết quả cuối cùng. Nếu kết quả của từng bước và kết quả toàn bộ luồng đều đúng với yêu cầu, test case được xem là đạt.
+System Testing
+System Testing (kiểm thử hệ thống) là mức kiểm thử được thực hiện trên một hệ thống phần mềm đã được tích hợp tương đối hoàn chỉnh nhằm đánh giá hoạt động của hệ thống dưới góc nhìn tổng thể. Khác với Unit Testing tập trung vào từng đơn vị chương trình riêng lẻ và Integration Testing tập trung vào sự tương tác giữa các module, System Testing xem toàn bộ phần mềm như một hệ thống hoàn chỉnh để xác định liệu các chức năng có đáp ứng đúng những yêu cầu đã đặt ra hay không.
+Trong đề cương của bài báo cáo, System Testing được định hướng kiểm thử tổng thể dựa trên yêu cầu hệ thống, bao gồm cả kiểm thử chức năng, phi chức năng, hiệu năng và bảo mật. Các trường hợp kiểm thử cần được thực hiện theo cách người dùng cuối sử dụng hệ thống, đồng thời bao quát cả những trường hợp đặc biệt có thể xảy ra trong quá trình vận hành.
+Ở mức kiểm thử này, người kiểm thử thường không quan tâm sâu đến từng phương thức hoặc cách các module bên trong được cài đặt như thế nào. Thay vào đó, hệ thống được quan sát từ bên ngoài thông qua các chức năng mà người dùng có thể tương tác. Một quy trình nghiệp vụ có thể đi qua nhiều module khác nhau nhưng kết quả cuối cùng phải đáp ứng đúng yêu cầu của người sử dụng.
+Ví dụ, với hệ thống quản lý vàng bạc, một nghiệp vụ bán hàng hoàn chỉnh có thể bắt đầu từ thời điểm nhân viên đăng nhập, lựa chọn chi nhánh và sản phẩm, kiểm tra tồn kho, áp dụng bảng giá vàng hiện hành, tạo giao dịch, xác nhận thanh toán, cập nhật số lượng hàng trong kho và cuối cùng phản ánh dữ liệu vào báo cáo doanh thu. Trong System Testing, toàn bộ chuỗi nghiệp vụ này được kiểm tra như một quy trình thống nhất thay vì kiểm tra riêng từng module.
+Nếu một giao dịch được lưu thành công nhưng số lượng tồn kho không thay đổi, doanh thu không được cập nhật hoặc giao dịch được ghi nhận sai chi nhánh thì toàn bộ nghiệp vụ vẫn được xem là không đạt yêu cầu. Điều này cho thấy System Testing đặc biệt quan tâm đến kết quả cuối cùng của hệ thống sau khi toàn bộ quy trình được thực hiện.
+Đối với phần mềm quản lý vàng bạc trong đề tài, System Testing còn cần kiểm tra khả năng vận hành trong mô hình nhiều doanh nghiệp. Người dùng thuộc doanh nghiệp này chỉ được thao tác với dữ liệu nằm trong phạm vi được cấp. Khi người dùng đăng nhập, hệ thống phải xác định chính xác doanh nghiệp, chi nhánh, vai trò và quyền hạn trước khi cho phép thực hiện các nghiệp vụ.
+Chẳng hạn, một nhân viên bán hàng tại chi nhánh A thực hiện giao dịch bán sản phẩm. Hệ thống phải bảo đảm sản phẩm được lấy từ đúng kho của chi nhánh, sử dụng đúng bảng giá, tạo giao dịch thuộc đúng doanh nghiệp và cập nhật báo cáo của đúng đơn vị. Sau khi hoàn tất, người dùng thuộc doanh nghiệp khác hoặc chi nhánh không có quyền không được phép truy cập giao dịch này.
+System Testing không chỉ giới hạn ở việc kiểm tra các trường hợp sử dụng thông thường. Những tình huống bất thường cũng cần được xem xét, chẳng hạn người dùng nhập dữ liệu không hợp lệ, bán số lượng lớn hơn tồn kho, cố truy cập chức năng ngoài quyền hạn, thực hiện giao dịch khi bảng giá chưa có dữ liệu phù hợp hoặc truy cập tài nguyên của một doanh nghiệp khác.
+Kiểm thử chức năng trong System Testing
+Kiểm thử chức năng tập trung đánh giá hệ thống có thực hiện đúng những nghiệp vụ đã được đặc tả hay không. Đối với hệ thống trong đề tài, các nội dung có thể bao gồm quá trình đăng nhập, quản lý doanh nghiệp, quản lý chi nhánh, quản lý hàng hóa, quản lý kho, cập nhật bảng giá, mua hàng, bán hàng và tạo báo cáo.
+Ví dụ, khi người dùng thực hiện một giao dịch bán hàng hợp lệ, hệ thống cần tạo giao dịch thành công, tính đúng giá trị thanh toán, giảm đúng số lượng tồn và phản ánh dữ liệu vào báo cáo. Ngược lại, khi hàng hóa không đủ số lượng, hệ thống phải từ chối giao dịch và không được làm thay đổi dữ liệu tồn kho.
+Kiểm thử phi chức năng
+Bên cạnh tính đúng đắn của nghiệp vụ, System Testing còn có thể xem xét những đặc tính liên quan đến chất lượng sử dụng của hệ thống. Theo định hướng của đề cương, phạm vi này có thể bao gồm hiệu năng và bảo mật.
+Về hiệu năng, có thể đánh giá thời gian phản hồi khi người dùng tìm kiếm hàng hóa, tải danh sách giao dịch hoặc tạo báo cáo với khối lượng dữ liệu lớn. Một chức năng trả về kết quả chính xác nhưng mất quá nhiều thời gian vẫn có thể ảnh hưởng đáng kể đến trải nghiệm và hoạt động kinh doanh.
+Về bảo mật và kiểm soát truy cập, cần xác định người dùng có thể truy cập đúng những chức năng được cấp quyền và không thể vượt qua phạm vi đó. Với kiến trúc nhiều doanh nghiệp, đây là một nội dung cần được kiểm thử đặc biệt kỹ bởi việc truy cập nhầm dữ liệu giữa các doanh nghiệp có thể gây hậu quả nghiêm trọng.
+Quy trình thực hiện System Testing
+Sau khi hệ thống đã được tích hợp, người kiểm thử chuẩn bị môi trường và dữ liệu gần với điều kiện sử dụng thực tế. Các test case được xây dựng từ yêu cầu nghiệp vụ và mô phỏng cách người dùng cuối tương tác với phần mềm.
+Một luồng System Testing có thể được khái quát như sau: Yêu cầu hệ thống → Xây dựng kịch bản sử dụng → Chuẩn bị dữ liệu kiểm thử → Người dùng thực hiện nghiệp vụ → Hệ thống xử lý xuyên suốt các module → Kiểm tra kết quả cuối cùng → So sánh với yêu cầu → Pass/Fail.
+Nếu test case không đạt, lỗi được ghi nhận cùng dữ liệu đầu vào, các bước tái hiện, kết quả mong đợi và kết quả thực tế. Sau khi lỗi được sửa, trường hợp kiểm thử cần được thực hiện lại để xác nhận vấn đề đã được khắc phục.
+Áp dụng đối với hệ thống quản lý vàng bạc
+Một kịch bản System Testing hoàn chỉnh trong đề tài có thể là:
+Hình 2.20: Quy trình System Testing trên hệ thống quản lý vàng bạc
+Ở kịch bản này, điều cần đánh giá không chỉ là giao dịch có được tạo hay không mà còn là toàn bộ trạng thái của hệ thống sau giao dịch có chính xác và nhất quán hay không.
+Nếu trước giao dịch kho có 10 sản phẩm và bán 2 sản phẩm, sau khi giao dịch thành công tồn kho phải còn 8. Giao dịch phải được ghi nhận đúng chi nhánh, doanh thu phải phản ánh đúng giá trị giao dịch và người dùng không có quyền không được phép xem hoặc thay đổi dữ liệu đó.
+Như vậy, System Testing đóng vai trò kiểm tra phần mềm ở cấp độ gần nhất với cách hệ thống được sử dụng trong thực tế. Thông qua việc mô phỏng các quy trình nghiệp vụ hoàn chỉnh và kiểm tra cả những tình huống bình thường lẫn bất thường, nhóm có thể đánh giá mức độ đáp ứng của toàn bộ phần mềm trước khi hệ thống được đưa vào vận hành.
+Acceptance Testing
+Acceptance Testing (kiểm thử chấp nhận) là mức kiểm thử được thực hiện nhằm đánh giá xem hệ thống đã đáp ứng đầy đủ các yêu cầu nghiệp vụ và có đủ điều kiện để được người sử dụng hoặc đơn vị tiếp nhận chấp nhận đưa vào vận hành hay chưa. Khác với Unit Testing tập trung vào từng thành phần, Integration Testing tập trung vào sự phối hợp giữa các module và System Testing kiểm tra toàn bộ hệ thống, Acceptance Testing đặt trọng tâm vào câu hỏi: “Phần mềm này có thực sự đáp ứng nhu cầu sử dụng trong thực tế hay không?”
+Acceptance Testing thường được thực hiện khi hệ thống đã tương đối hoàn chỉnh và những chức năng quan trọng đã vượt qua các mức kiểm thử trước đó. Ở giai đoạn này, việc kiểm thử không đi sâu vào cấu trúc mã nguồn hay cách các module bên trong trao đổi dữ liệu, mà chủ yếu đánh giá hệ thống dựa trên các yêu cầu nghiệp vụ, quy trình làm việc thực tế và kỳ vọng của người sử dụng.
+Một đặc điểm quan trọng của Acceptance Testing là các kịch bản kiểm thử thường được xây dựng gần với cách người dùng thực sự sử dụng phần mềm. Thay vì kiểm tra riêng một nút bấm hoặc một hàm xử lý, người kiểm thử thực hiện một chuỗi thao tác hoàn chỉnh và đánh giá kết quả cuối cùng có phù hợp với yêu cầu nghiệp vụ hay không.
+Đối với hệ thống quản lý vàng bạc, trang sức trong đề tài, một kịch bản Acceptance Testing có thể bắt đầu từ việc người quản lý doanh nghiệp đăng nhập vào hệ thống, tạo chi nhánh, thiết lập kho, thêm nhân viên, cập nhật bảng giá vàng, nhập hàng hóa và sau đó thực hiện một giao dịch bán hàng. Sau khi giao dịch hoàn tất, người dùng tiếp tục kiểm tra tồn kho và báo cáo doanh thu để xác nhận dữ liệu được cập nhật chính xác.
+Ở đây, người sử dụng không quan tâm module bán hàng đã gọi tới bao nhiêu service hoặc dữ liệu được xử lý qua những lớp nào. Điều họ quan tâm là nghiệp vụ thực tế có được thực hiện đúng hay không: sản phẩm có bán được đúng giá, tồn kho có giảm đúng số lượng, hóa đơn có ghi nhận đúng thông tin và doanh thu có xuất hiện trong báo cáo hay không.
+Acceptance Testing vì vậy có mối quan hệ trực tiếp với những yêu cầu ban đầu của hệ thống. Một chức năng dù hoạt động ổn định về mặt kỹ thuật nhưng không đáp ứng đúng quy trình kinh doanh thực tế vẫn có thể bị đánh giá là chưa đạt yêu cầu chấp nhận.
+User Acceptance Testing
+Một hình thức phổ biến của Acceptance Testing là User Acceptance Testing (UAT). Trong UAT, người dùng đại diện cho đơn vị sử dụng phần mềm trực tiếp thực hiện các nghiệp vụ trên hệ thống và xác nhận xem sản phẩm có phù hợp với nhu cầu thực tế hay không.
+Đối với hệ thống trong đề tài, nhóm người thực hiện UAT có thể được mô phỏng theo các vai trò như quản trị viên công ty chủ quản, quản lý doanh nghiệp, quản lý chi nhánh, nhân viên kho và nhân viên bán hàng. Mỗi nhóm người dùng sẽ kiểm tra những nghiệp vụ thuộc trách nhiệm của mình.
+Chẳng hạn, nhân viên bán hàng quan tâm đến quá trình tìm kiếm sản phẩm, lấy giá, tạo giao dịch và thanh toán; nhân viên kho quan tâm đến nhập, xuất và số lượng tồn; trong khi người quản lý quan tâm nhiều hơn đến báo cáo doanh thu, trạng thái hàng hóa và khả năng theo dõi hoạt động của từng chi nhánh.
+Acceptance Testing cũng cần đặc biệt chú ý đến phân quyền. Một hệ thống không chỉ phải cho phép người dùng thực hiện những nghiệp vụ cần thiết mà còn phải ngăn người dùng thực hiện những thao tác nằm ngoài trách nhiệm của mình. Vì vậy, người dùng thử nghiệm có thể kiểm tra cả hai tình huống: chức năng được phép phải sử dụng được và chức năng không được phép phải bị hệ thống từ chối.
+Alpha Testing và Beta Testing
+Ngoài UAT, Acceptance Testing còn có thể được đề cập dưới hai hình thức là Alpha Testing và Beta Testing.
+Alpha Testing thường được thực hiện trong môi trường do đơn vị phát triển kiểm soát trước khi sản phẩm được cung cấp rộng rãi cho người sử dụng. Các chức năng chính được kiểm tra trong điều kiện gần với thực tế nhằm phát hiện những vấn đề còn tồn tại.
+Beta Testing được thực hiện với một nhóm người dùng thực tế trong môi trường gần hoặc tương đương môi trường sử dụng thật. Thông qua quá trình này, nhóm phát triển có thể thu thập phản hồi về những vấn đề mà các giai đoạn kiểm thử trước chưa phát hiện được.
+Trong phạm vi bài tập lớn, nhóm không nhất thiết phải triển khai Alpha và Beta Testing đầy đủ như một sản phẩm thương mại thực tế. Tuy nhiên, hai khái niệm này có thể được trình bày trong phần cơ sở lý thuyết để làm rõ các hình thức phổ biến của kiểm thử chấp nhận.
+Tiêu chí chấp nhận hệ thống
+Acceptance Testing thường dựa trên các Acceptance Criteria – tiêu chí chấp nhận đã được xác định từ yêu cầu nghiệp vụ. Đối với hệ thống quản lý vàng bạc, một giao dịch bán hàng chẳng hạn chỉ được xem là đáp ứng yêu cầu khi toàn bộ kết quả sau giao dịch đều chính xác.
+Ví dụ, có thể xác định tiêu chí như sau:
+Khi nhân viên có đủ quyền thực hiện bán một sản phẩm đang còn trong kho, hệ thống phải sử dụng đúng thông tin giá, tạo giao dịch thành công, cập nhật tồn kho chính xác và ghi nhận doanh thu cho đúng chi nhánh.
+Nếu một trong các kết quả trên không đáp ứng yêu cầu thì dù giao diện hiển thị thông báo “giao dịch thành công”, nghiệp vụ vẫn chưa thể được coi là đạt tiêu chí chấp nhận.
+Áp dụng đối với hệ thống quản lý vàng bạc
+Một kịch bản Acceptance Testing tương đối đầy đủ đối với đề tài có thể được mô tả như sau:
+Quản lý doanh nghiệp đăng nhập → tạo chi nhánh → thiết lập kho → tạo tài khoản nhân viên → khai báo hàng hóa → cập nhật bảng giá → nhân viên đăng nhập → thực hiện giao dịch bán → hệ thống cập nhật tồn kho → người quản lý kiểm tra báo cáo doanh thu.
+Sau khi hoàn thành toàn bộ quy trình, người kiểm thử đối chiếu kết quả với các yêu cầu đã xác định. Nếu dữ liệu chính xác, các chức năng hoạt động đúng phạm vi phân quyền và quy trình phù hợp với hoạt động thực tế của doanh nghiệp, kịch bản được đánh giá là đạt.
+Nếu ngược lại, người dùng gặp một vấn đề làm cho nghiệp vụ không thể hoàn thành hoặc kết quả cuối cùng không đúng với yêu cầu thì hệ thống chưa đáp ứng tiêu chí chấp nhận và cần được điều chỉnh trước khi triển khai.
+Các kỹ thuật thiết kế Test Case
+Thiết kế Test Case là quá trình xác định các điều kiện kiểm thử, dữ liệu đầu vào, các bước thực hiện và kết quả mong đợi nhằm kiểm tra một chức năng hoặc một yêu cầu cụ thể của phần mềm. Trong thực tế, một hệ thống có thể tiếp nhận rất nhiều loại dữ liệu và tồn tại nhiều tình huống xử lý khác nhau. Việc kiểm thử toàn bộ mọi giá trị đầu vào và mọi trường hợp có thể xảy ra thường không khả thi cả về thời gian lẫn chi phí.
+Vì vậy, các kỹ thuật thiết kế Test Case được sử dụng nhằm lựa chọn những trường hợp kiểm thử có tính đại diện và có khả năng phát hiện lỗi cao. Việc lựa chọn kỹ thuật phụ thuộc vào đặc điểm của chức năng, loại dữ liệu, yêu cầu nghiệp vụ cũng như mức độ truy cập vào cấu trúc bên trong của chương trình.
+Phân vùng tương đương – Equivalence Partitioning
+Equivalence Partitioning, hay phân vùng tương đương, là kỹ thuật chia tập dữ liệu đầu vào thành các nhóm mà các giá trị trong cùng một nhóm được kỳ vọng sẽ được hệ thống xử lý theo cách tương tự nhau. Mỗi nhóm như vậy được gọi là một vùng tương đương.
+Ý tưởng chính của kỹ thuật này là nếu các giá trị trong cùng một vùng có cùng đặc điểm và chịu cùng một quy tắc xử lý thì không nhất thiết phải kiểm thử toàn bộ các giá trị đó. Thay vào đó, người kiểm thử lựa chọn một hoặc một số giá trị đại diện cho mỗi vùng.
+Các vùng tương đương thường được chia thành hai nhóm chính là vùng hợp lệ và vùng không hợp lệ. Vùng hợp lệ chứa các dữ liệu đáp ứng điều kiện của hệ thống, trong khi vùng không hợp lệ chứa những dữ liệu vi phạm điều kiện đã được xác định.
+Chẳng hạn, nếu một trường chỉ chấp nhận giá trị nguyên từ 1 đến 100 thì có thể xác định ba vùng tương đương: các giá trị nhỏ hơn 1, các giá trị từ 1 đến 100 và các giá trị lớn hơn 100. Thay vì kiểm thử toàn bộ các giá trị từ âm vô cùng đến dương vô cùng, người kiểm thử có thể lựa chọn một giá trị đại diện từ từng vùng.
+Kỹ thuật phân vùng tương đương có ưu điểm là giúp giảm số lượng Test Case trong khi vẫn kiểm tra được những nhóm dữ liệu quan trọng. Đây là kỹ thuật thích hợp đối với các trường có điều kiện rõ ràng về giá trị, kiểu dữ liệu, độ dài hoặc tập giá trị được phép.
+Tuy nhiên, hiệu quả của kỹ thuật phụ thuộc rất nhiều vào việc xác định đúng các vùng tương đương. Nếu phân chia vùng chưa chính xác hoặc bỏ sót một nhóm dữ liệu quan trọng thì các lỗi liên quan đến vùng đó có thể không được phát hiện.
+Phân tích giá trị biên – Boundary Value Analysis
+Boundary Value Analysis, hay phân tích giá trị biên, là kỹ thuật thiết kế Test Case tập trung vào các giá trị nằm tại hoặc gần ranh giới của miền dữ liệu.
+Trong thực tế, nhiều lỗi lập trình thường xuất hiện ở những điểm giới hạn, chẳng hạn sử dụng toán tử > thay vì >=, xử lý sai giá trị nhỏ nhất hoặc lớn nhất, hoặc sai khi xác định độ dài tối đa của một chuỗi. Vì vậy, thay vì chỉ lựa chọn các giá trị nằm giữa khoảng, kỹ thuật này ưu tiên kiểm tra các giá trị tại biên và những giá trị ngay bên cạnh biên.
+Nếu một dữ liệu hợp lệ nằm trong khoảng từ 1 đến 100 thì các giá trị có ý nghĩa kiểm thử thường bao gồm 0, 1, 2, 99, 100 và 101. Trong đó, 1 và 100 là hai giá trị biên hợp lệ; 0 và 101 nằm ngay bên ngoài miền hợp lệ; còn 2 và 99 nằm ngay phía trong biên.
+Boundary Value Analysis thường được sử dụng kết hợp với Equivalence Partitioning. Phân vùng tương đương giúp xác định các miền dữ liệu khác nhau, còn phân tích giá trị biên giúp tập trung sâu vào những điểm chuyển tiếp giữa các miền đó.
+Kỹ thuật này phù hợp với các trường có giới hạn số học, giới hạn độ dài, số lượng phần tử, khoảng thời gian hoặc bất kỳ dữ liệu nào có giá trị nhỏ nhất và lớn nhất xác định.
+Ưu điểm của Boundary Value Analysis là có khả năng phát hiện tốt những lỗi xảy ra tại giới hạn của dữ liệu mà số lượng Test Case vẫn tương đối nhỏ. Hạn chế của phương pháp là nó chủ yếu tập trung vào các giá trị biên nên cần kết hợp với những kỹ thuật khác để kiểm tra đầy đủ logic nghiệp vụ.
+Bảng quyết định – Decision Table Testing
+Decision Table Testing là kỹ thuật thiết kế Test Case sử dụng bảng quyết định để biểu diễn mối quan hệ giữa nhiều điều kiện đầu vào và các hành động hoặc kết quả tương ứng.
+Kỹ thuật này đặc biệt hữu ích đối với những chức năng có nhiều quy tắc nghiệp vụ và kết quả phụ thuộc vào sự kết hợp của nhiều điều kiện khác nhau. Trong những trường hợp như vậy, việc chỉ kiểm thử từng điều kiện riêng lẻ có thể làm bỏ sót những tình huống xảy ra khi nhiều điều kiện cùng xuất hiện.
+Một bảng quyết định thường gồm hai phần chính. Phần đầu thể hiện các điều kiện, phần còn lại thể hiện các hành động hoặc kết quả. Mỗi cột của bảng biểu diễn một quy tắc, tức một tổ hợp cụ thể của các điều kiện và hành động tương ứng mà hệ thống cần thực hiện.
+Ví dụ, một chức năng có hai điều kiện đúng hoặc sai sẽ có tối đa bốn tổ hợp. Khi số lượng điều kiện tăng lên, số lượng tổ hợp cũng tăng theo. Người kiểm thử sử dụng bảng quyết định để xác định những tổ hợp có ý nghĩa, từ đó xây dựng các Test Case tương ứng.
+Điểm mạnh của Decision Table Testing là khả năng mô hình hóa rõ ràng những quy tắc nghiệp vụ phức tạp. Người kiểm thử có thể dễ dàng nhận biết trường hợp nào đã được xem xét và trường hợp nào còn thiếu.
+Tuy nhiên, khi số lượng điều kiện quá lớn, bảng quyết định có thể trở nên phức tạp và số lượng tổ hợp tăng rất nhanh. Khi đó cần loại bỏ những trường hợp không thể xảy ra hoặc những tổ hợp có kết quả tương đương để giảm số lượng Test Case.
+Kiểm thử chuyển trạng thái – State Transition Testing
+State Transition Testing, hay kiểm thử chuyển trạng thái, là kỹ thuật kiểm thử được sử dụng khi hành vi của hệ thống phụ thuộc vào trạng thái hiện tại và các sự kiện đã xảy ra trước đó.
+Trong một hệ thống có trạng thái, cùng một thao tác của người dùng có thể cho ra những kết quả khác nhau tùy theo trạng thái hiện tại của đối tượng. Khi một sự kiện xảy ra, hệ thống có thể chuyển từ trạng thái này sang trạng thái khác theo những quy tắc đã được xác định.
+Các thành phần chính của mô hình chuyển trạng thái gồm trạng thái hiện tại, sự kiện hoặc hành động, điều kiện chuyển trạng thái và trạng thái tiếp theo.
+Một ví dụ điển hình là cơ chế đăng nhập. Ban đầu tài khoản ở trạng thái hoạt động. Sau một số lần nhập sai mật khẩu liên tiếp, tài khoản có thể chuyển sang trạng thái bị khóa. Khi đã bị khóa, dù người dùng nhập đúng mật khẩu thì hệ thống vẫn có thể từ chối đăng nhập cho đến khi tài khoản được mở lại.
+Trong trường hợp này, việc chỉ kiểm tra dữ liệu đầu vào ở một thời điểm là chưa đủ. Người kiểm thử phải xem xét chuỗi sự kiện và trạng thái mà hệ thống đã trải qua trước đó.
+State Transition Testing giúp phát hiện những lỗi như chuyển sai trạng thái, cho phép chuyển sang trạng thái không hợp lệ, không chuyển trạng thái khi điều kiện đã đáp ứng hoặc xử lý sai một hành động trong một trạng thái cụ thể.
+Kỹ thuật này thường phù hợp với các chức năng như tài khoản người dùng, đơn hàng, giao dịch, quy trình xét duyệt, trạng thái thanh toán hoặc các đối tượng có vòng đời rõ ràng.
+Statement Coverage / Branch Coverage
+Statement Coverage và Branch Coverage là những kỹ thuật đo mức độ bao phủ của mã nguồn trong quá trình kiểm thử. Khác với các kỹ thuật trước chủ yếu dựa trên dữ liệu đầu vào và yêu cầu chức năng, hai kỹ thuật này quan tâm đến cấu trúc bên trong của chương trình.
+Statement Coverage – độ bao phủ câu lệnh cho biết tỷ lệ các câu lệnh trong mã nguồn đã được thực thi ít nhất một lần trong quá trình chạy Test Case.
+Có thể biểu diễn khái quát:
+Statement Coverage = Số câu lệnh đã được thực thi / Tổng số câu lệnh × 100%
+Nếu chương trình có 100 câu lệnh và bộ Test Case đã làm cho 90 câu lệnh được thực thi ít nhất một lần thì Statement Coverage đạt 90%.
+Mục tiêu của kỹ thuật này là hạn chế tình trạng tồn tại những đoạn mã chưa từng được kiểm tra. Tuy nhiên, việc đạt 100% Statement Coverage không có nghĩa chương trình hoàn toàn không còn lỗi, bởi một câu lệnh có thể được thực thi nhưng các nhánh logic xung quanh nó chưa được kiểm tra đầy đủ.
+Branch Coverage – độ bao phủ nhánh tập trung vào các điểm quyết định của chương trình như if, else, switch hoặc những biểu thức điều kiện khác. Mục tiêu là bảo đảm mỗi nhánh có thể xảy ra của một điều kiện đều được thực hiện ít nhất một lần.
+Công thức có thể biểu diễn:
+Branch Coverage = Số nhánh đã được thực thi / Tổng số nhánh × 100%
+Branch Coverage thường cung cấp mức kiểm tra logic cao hơn Statement Coverage vì nó yêu cầu cả trường hợp điều kiện đúng và điều kiện sai phải được thực hiện.
+Tuy nhiên, độ bao phủ mã nguồn chỉ là một chỉ số hỗ trợ đánh giá mức độ kiểm thử. Một bộ Test Case đạt độ bao phủ cao vẫn có thể bỏ sót lỗi nếu dữ liệu kiểm thử hoặc kết quả mong đợi được thiết kế chưa phù hợp.
+Kiểm thử hộp đen và kiểm thử hộp trắng
+Kiểm thử hộp đen – Black-box Testing
+Black-box Testing, hay kiểm thử hộp đen, là phương pháp kiểm thử trong đó người kiểm thử tập trung vào dữ liệu đầu vào và kết quả đầu ra mà không cần quan tâm chi tiết đến cách chương trình được cài đặt bên trong.
+Người kiểm thử dựa chủ yếu vào yêu cầu chức năng, đặc tả nghiệp vụ và hành vi mong đợi của hệ thống. Một Test Case được xem xét theo nguyên tắc: với một dữ liệu đầu vào xác định, hệ thống phải trả về kết quả nào.
+Trong Black-box Testing, người kiểm thử có thể không biết chương trình sử dụng thuật toán nào, cấu trúc dữ liệu nào hoặc mã nguồn được tổ chức ra sao. Điều quan trọng là hành vi bên ngoài của hệ thống phải phù hợp với yêu cầu.
+Các kỹ thuật thường được sử dụng trong kiểm thử hộp đen gồm Equivalence Partitioning, Boundary Value Analysis, Decision Table Testing và State Transition Testing.
+Ưu điểm của Black-box Testing là có thể kiểm thử phần mềm từ góc nhìn gần với người sử dụng thực tế, đồng thời không yêu cầu người kiểm thử phải hiểu sâu mã nguồn. Tuy nhiên, hạn chế là khó đánh giá liệu tất cả các nhánh xử lý bên trong chương trình đã được thực thi hay chưa.
+Kiểm thử hộp trắng – White-box Testing
+White-box Testing, hay kiểm thử hộp trắng, là phương pháp kiểm thử dựa trên việc xem xét cấu trúc và logic bên trong của chương trình. Người kiểm thử có thể sử dụng mã nguồn để xác định các đường đi, câu lệnh, điều kiện và nhánh cần được kiểm tra.
+Mục tiêu của White-box Testing là xác định rằng các thành phần bên trong chương trình được thực thi đúng theo thiết kế. Người kiểm thử không chỉ quan tâm kết quả cuối cùng mà còn xem xét cách chương trình đạt được kết quả đó.
+Các kỹ thuật thường gặp trong kiểm thử hộp trắng gồm Statement Coverage, Branch Coverage, Condition Coverage và Path Coverage.
+White-box Testing có khả năng phát hiện các đoạn mã không được thực thi, điều kiện xử lý sai, nhánh logic bị bỏ sót hoặc những đường đi bất thường trong chương trình. Phương pháp này thường được sử dụng nhiều ở mức Unit Testing.
+Hạn chế của White-box Testing là yêu cầu người thực hiện phải có kiến thức về lập trình và hiểu cấu trúc mã nguồn. Ngoài ra, việc kiểm tra kỹ cấu trúc bên trong cũng không bảo đảm rằng chương trình đã đáp ứng đầy đủ nhu cầu của người dùng nếu đặc tả nghiệp vụ bị hiểu sai.
+So sánh hai phương pháp
+Black-box Testing và White-box Testing có sự khác nhau chủ yếu ở góc nhìn kiểm thử. Black-box Testing xem phần mềm như một hộp kín và tập trung vào quan hệ giữa đầu vào với đầu ra. Ngược lại, White-box Testing xem xét trực tiếp cấu trúc bên trong và logic xử lý của chương trình.
+Black-box Testing phù hợp khi cần xác minh một chức năng có đáp ứng yêu cầu của người dùng hay không, trong khi White-box Testing phù hợp khi cần đánh giá độ bao phủ và tính chính xác của mã nguồn.
+Về cơ sở thiết kế Test Case, Black-box Testing chủ yếu dựa trên yêu cầu và đặc tả phần mềm. White-box Testing lại dựa nhiều hơn vào mã nguồn, cấu trúc điều khiển và các đường đi trong chương trình.
+Không nên xem hai phương pháp là sự lựa chọn thay thế hoàn toàn cho nhau. Trong thực tế, kết hợp cả hai giúp quá trình kiểm thử toàn diện hơn: Black-box Testing kiểm tra hành vi của hệ thống từ bên ngoài, còn White-box Testing hỗ trợ đánh giá chất lượng xử lý bên trong.
+Kiểm thử thủ công và kiểm thử tự động
+Manual Testing
+Manual Testing, hay kiểm thử thủ công, là hình thức kiểm thử trong đó người kiểm thử trực tiếp thực hiện các bước của Test Case mà không sử dụng chương trình tự động để thực hiện toàn bộ quá trình.
+Người kiểm thử tương tác với phần mềm giống như người dùng thực tế, nhập dữ liệu, thực hiện các thao tác và quan sát kết quả. Sau đó, kết quả thực tế được so sánh với kết quả mong đợi để xác định Test Case đạt hay không đạt.
+Manual Testing phù hợp với những chức năng mới, những tình huống cần quan sát trực quan, kiểm thử khả năng sử dụng hoặc những Test Case chỉ cần thực hiện một số ít lần.
+Một ưu điểm quan trọng của kiểm thử thủ công là tính linh hoạt. Trong quá trình thực hiện, người kiểm thử có thể nhận thấy những hành vi bất thường ngoài phạm vi Test Case ban đầu và tiếp tục khám phá hệ thống.
+Tuy nhiên, khi số lượng Test Case lớn hoặc cần lặp lại thường xuyên, Manual Testing có thể tiêu tốn nhiều thời gian và dễ xảy ra sai sót do yếu tố con người.
+Automation Testing
+Automation Testing, hay kiểm thử tự động, là hình thức sử dụng công cụ hoặc chương trình để tự động thực hiện các bước kiểm thử, thu thập kết quả và so sánh với kết quả mong đợi.
+Các kịch bản tự động có thể được chạy nhiều lần mà không cần người kiểm thử thực hiện lại từng thao tác bằng tay. Vì vậy, Automation Testing đặc biệt có lợi đối với những Test Case cần lặp lại thường xuyên.
+Một trong những trường hợp phổ biến là Regression Testing – kiểm thử hồi quy. Khi phần mềm được thay đổi hoặc bổ sung chức năng mới, các Test Case tự động có thể được chạy lại để kiểm tra xem những chức năng trước đó có bị ảnh hưởng hay không.
+Automation Testing cũng phù hợp khi cần kiểm thử với số lượng dữ liệu lớn, thực hiện kiểm thử thường xuyên trong quá trình phát triển hoặc tích hợp vào quy trình CI/CD.
+Tuy nhiên, tự động hóa không có nghĩa mọi Test Case đều nên được tự động hóa. Việc xây dựng và duy trì mã kiểm thử cũng cần thời gian và chi phí. Những Test Case thường xuyên thay đổi hoặc yêu cầu đánh giá trực quan của con người có thể phù hợp với Manual Testing hơn.
+Ưu, nhược điểm của từng phương pháp
+Manual Testing có ưu điểm về sự linh hoạt, dễ triển khai ở giai đoạn đầu và phù hợp với những chức năng cần sự quan sát của con người. Người kiểm thử có thể thay đổi thao tác trong quá trình thực hiện và khám phá những tình huống ngoài kịch bản ban đầu. Tuy nhiên, phương pháp này mất nhiều thời gian khi phải thực hiện lặp lại và kết quả có thể chịu ảnh hưởng bởi sai sót của người thực hiện.
+Automation Testing có ưu điểm về tốc độ, tính lặp lại và khả năng thực hiện một lượng lớn Test Case trong thời gian ngắn. Khi kịch bản tự động đã ổn định, việc chạy lại Test Case có thể được thực hiện nhiều lần với kết quả nhất quán.
+Ngược lại, Automation Testing cần thời gian xây dựng ban đầu, yêu cầu kiến thức về công cụ hoặc lập trình và cần bảo trì khi giao diện hoặc nghiệp vụ của phần mềm thay đổi.
+Do đó, trong thực tế hai phương pháp thường được sử dụng kết hợp. Những Test Case lặp lại thường xuyên và có quy trình rõ ràng có thể được tự động hóa, còn những trường hợp cần đánh giá trực quan hoặc khám phá hành vi mới của hệ thống vẫn phù hợp với kiểm thử thủ công.
+Một số công cụ sử dụng trong kiểm thử
+Công cụ kiểm thử hỗ trợ người kiểm thử thực hiện các hoạt động như viết và chạy Unit Test, kiểm thử API, kiểm thử giao diện, kiểm thử hiệu năng, quản lý Test Case và tự động hóa quá trình kiểm thử. Việc lựa chọn công cụ phụ thuộc vào công nghệ của phần mềm, mục tiêu kiểm thử và môi trường triển khai.
+JUnit là framework kiểm thử phổ biến dành cho Java, thường được sử dụng để xây dựng và thực thi Unit Test. JUnit hỗ trợ định nghĩa các phương thức kiểm thử, thiết lập dữ liệu trước khi chạy và kiểm tra kết quả thông qua các câu lệnh assertion.
+Postman là công cụ hỗ trợ kiểm thử API. Người kiểm thử có thể gửi các HTTP request như GET, POST, PUT hoặc DELETE, cấu hình header, tham số và request body, sau đó kiểm tra response trả về từ hệ thống. Postman cũng hỗ trợ viết các đoạn script để kiểm tra tự động một số điều kiện của response.
+Selenium là công cụ tự động hóa trình duyệt web. Selenium cho phép mô phỏng các thao tác của người dùng như mở trang, nhập dữ liệu, nhấn nút, điều hướng giữa các màn hình và kiểm tra nội dung hiển thị. Công cụ này thường được sử dụng trong Automation Testing đối với các ứng dụng web.
+JMeter là công cụ thường được sử dụng để kiểm thử hiệu năng và tải. Công cụ có khả năng mô phỏng nhiều yêu cầu đồng thời gửi tới hệ thống, từ đó hỗ trợ đánh giá thời gian phản hồi, khả năng chịu tải và mức độ ổn định khi số lượng người dùng hoặc yêu cầu tăng cao.
+Việc sử dụng công cụ kiểm thử không thay thế hoàn toàn vai trò của người kiểm thử. Công cụ chủ yếu giúp tự động hóa những thao tác lặp lại, thu thập kết quả và nâng cao hiệu quả thực hiện. Người kiểm thử vẫn cần xác định mục tiêu, thiết kế Test Case, lựa chọn dữ liệu và phân tích kết quả để đánh giá chính xác chất lượng của phần mềm.
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ TEST
+Mục tiêu kiểm thử
+Xác minh hệ thống đáp ứng đúng các yêu cầu chức năng đã phân tích trong Chương 1.
+Kiểm tra tính đúng đắn của dữ liệu giao dịch, tồn kho, bảng giá vàng và báo cáo doanh thu.
+Đánh giá khả năng phân quyền giữa quản trị hệ thống, quản lý doanh nghiệp và nhân viên chi nhánh.
+Phát hiện lỗi nghiệp vụ có thể gây sai lệch tiền, trọng lượng vàng, tồn kho hoặc quyền truy cập.
+Tạo cơ sở cho việc thực thi kiểm thử thủ công và kiểm thử tự động ở các chương sau.
+Demo một số testcase cơ bản trong báo cáo và tri tiết đính kèm tại: Google Sheets - Bộ test case kiểm thử phần mềm quản lý hàng trang sức.
+Phạm vi kiểm thử
+Bảng 3.1: Bảng phạm vi kiểm thử
+Nhóm chức năng
+Nội dung kiểm thử
+Mức ưu tiên
+Đăng nhập
+Kiểm tra tài khoản, mật khẩu, token đăng nhập và điều hướng theo vai trò
+Cao
+Quản lý doanh nghiệp
+Tạo, sửa, xem danh sách doanh nghiệp sử dụng phần mềm
+Cao
+Quản lý chi nhánh
+Quản lý thông tin chi nhánh, người quản lý, trạng thái hoạt động
+Trung bình
+Quản lý kho
+Theo dõi số lượng tồn, vị trí tủ, cảnh báo tồn kho thấp
+Cao
+Quản lý hàng hóa
+Quản lý mã hàng, tuổi vàng, trọng lượng, tiền công và giá bán
+Cao
+Nhân viên và phân quyền
+Tạo tài khoản, gán vai trò, kiểm soát quyền truy cập
+Cao
+Bảng giá vàng
+Cập nhật giá mua vào, bán ra và áp dụng vào giao dịch
+Cao
+Giao dịch bán hàng
+Lập phiếu bán, tính tiền, cập nhật tồn kho và sổ quỹ
+Cao
+Giao dịch mua hàng
+Lập phiếu mua lại vàng, tính tiền chi và cập nhật kho
+Cao
+Báo cáo thống kê
+Tổng hợp doanh thu, số giao dịch, tồn kho và vàng lưu chuyển
+Trung bình
+Dữ liệu kiểm thử
+Dữ liệu kiểm thử được xây dựng theo hướng mô phỏng hoạt động của một cửa hàng vàng có nhiều chi nhánh. Mỗi nhóm dữ liệu đại diện cho một tình huống nghiệp vụ thường gặp, đồng thời có thêm dữ liệu không hợp lệ để kiểm tra khả năng xử lý lỗi của hệ thống.
+Bảng 3.2: Bảng dữ liệu kiểm thử
+Loại dữ liệu
+Dữ liệu hợp lệ
+Dữ liệu không hợp lệ
+Tài khoản
+admin, manager, staff, warehouse
+Tên đăng nhập rỗng, mật khẩu sai, tài khoản bị khóa
+Doanh nghiệp
+Tên, mã số thuế, địa chỉ, người đại diện
+Trùng mã số thuế, thiếu tên doanh nghiệp
+Hàng hóa
+Mã hàng, tên hàng, tuổi vàng, trọng lượng, tiền công
+Trọng lượng âm, tuổi vàng không thuộc danh mục
+Bảng giá
+Giá mua vào và bán ra lớn hơn 0
+Giá bán nhỏ hơn giá mua hoặc bỏ trống giá
+Giao dịch
+Khách hàng, sản phẩm, trọng lượng, phương thức thanh toán
+Bán hàng khi tồn kho không đủ
+Ma trận truy vết yêu cầu và test case
+Bảng 3.3: Bảng ma trận truy vết
+Mã yêu cầu
+Yêu cầu nghiệp vụ
+Test case liên quan
+REQ01
+Người dùng đăng nhập và được phân quyền đúng vai trò
+UT01, UT02, IT01, ST01
+REQ02
+Quản trị tạo được doanh nghiệp và chi nhánh
+IT02, ST02
+REQ03
+Nhân viên kho quản lý hàng hóa và tồn kho
+UT05, IT03, ST03
+REQ04
+Bảng giá vàng được áp dụng vào giao dịch
+UT06, IT04, ST04
+REQ05
+Nhân viên lập phiếu bán hàng
+UT07, IT05, ST05
+REQ06
+Nhân viên lập phiếu mua hàng
+UT08, IT06, ST06
+REQ07
+Hệ thống cập nhật sổ quỹ và báo cáo
+IT07, ST07, ST08
+Thiết kế Unit Test
+Unit Test tập trung kiểm tra các thành phần xử lý nhỏ nhất của hệ thống. Các test case được thiết kế để kiểm tra cả trường hợp hợp lệ, không hợp lệ và giá trị biên. Mục tiêu là phát hiện lỗi trong hàm xử lý trước khi tích hợp với các module khác.
+Bảng 3.4: Bảng demo một số testcase cơ bản
+Mã TC
+Chức năng
+Dữ liệu đầu vào
+Kết quả mong đợi
+Kỹ thuật
+UT01
+Kiểm tra tên đăng nhập
+username rỗng
+Trả về lỗi bắt buộc nhập tên đăng nhập
+Equivalence Partitioning
+UT02
+Kiểm tra mật khẩu
+password rỗng
+Trả về lỗi bắt buộc nhập mật khẩu
+Equivalence Partitioning
+UT03
+Sinh token đăng nhập
+Tài khoản hợp lệ
+Token được tạo và lưu vào phiên làm việc
+Statement Coverage
+UT04
+Tính vàng ròng
+Tổng 2.5 chỉ, đá 0.2 chỉ
+Vàng ròng bằng 2.3 chỉ
+Boundary Value
+UT05
+Cảnh báo tồn kho
+Số lượng tồn bằng 3
+Trạng thái cảnh báo sắp hết
+Boundary Value
+UT06
+Kiểm tra giá vàng
+Giá bán nhỏ hơn giá mua
+Không cho lưu bảng giá
+Decision Table
+UT07
+Tính tiền bán
+Trọng lượng, đơn giá, tiền công
+Tổng tiền đúng công thức
+Statement Coverage
+UT08
+Tính tiền mua
+Trọng lượng và giá mua vào
+Số tiền chi cho khách đúng
+Statement Coverage
+UT09
+Kiểm tra quyền
+Nhân viên bán hàng mở màn quản trị
+Từ chối truy cập
+Branch Coverage
+UT10
+Kiểm tra báo cáo
+Danh sách giao dịch trong ngày
+Tổng doanh thu bằng tổng phiếu hợp lệ
+Statement Coverage
+Thiết kế Integration Test
+Integration Test được thiết kế nhằm kiểm tra dữ liệu truyền giữa các module. Đây là mức kiểm thử quan trọng vì phần mềm quản lý hàng trang sức có nhiều chức năng phụ thuộc lẫn nhau, đặc biệt là kho, bảng giá, giao dịch và sổ quỹ.
+Bảng 3.5: Bảng Integration test cơ bản
+Mã TC
+Module tích hợp
+Kịch bản
+Kết quả mong đợi
+IT01
+Đăng nhập - Phân quyền
+Đăng nhập bằng tài khoản quản lý chi nhánh
+Menu hiển thị đúng quyền được cấp
+IT02
+Doanh nghiệp - Chi nhánh
+Tạo chi nhánh thuộc doanh nghiệp đã tồn tại
+Chi nhánh gắn đúng doanh nghiệp
+IT03
+Hàng hóa - Kho
+Thêm hàng hóa và nhập số lượng tồn
+Kho cập nhật đúng mã hàng và số lượng
+IT04
+Bảng giá - Bán hàng
+Cập nhật giá vàng rồi lập phiếu bán
+Phiếu bán dùng giá mới nhất
+IT05
+Bán hàng - Kho
+Bán sản phẩm còn tồn
+Tồn kho giảm đúng số lượng
+IT06
+Mua hàng - Kho
+Mua lại vàng từ khách
+Tồn kho tăng và sinh mã hàng mua vào
+IT07
+Giao dịch - Sổ quỹ
+Hoàn tất phiếu bán bằng tiền mặt
+Sổ quỹ ghi nhận phiếu thu
+IT08
+Giao dịch - Báo cáo
+Tạo nhiều phiếu trong ngày
+Báo cáo doanh thu cập nhật đúng
+IT09
+Nhân viên - Vai trò
+Gán vai trò mới cho nhân viên
+Quyền truy cập thay đổi theo vai trò
+IT10
+Kho - In tem
+Chọn hàng hóa để in tem
+Tem hiển thị đúng mã hàng và thông tin vàng
+Thiết kế System Test
+System Test được thực hiện theo các luồng nghiệp vụ hoàn chỉnh. Người kiểm thử thao tác như người dùng cuối, bắt đầu từ đăng nhập, chọn chức năng, nhập dữ liệu, lưu kết quả và kiểm tra ảnh hưởng ở các màn hình liên quan.
+Bảng 3.6: Bảng System test cơ bản
+Mã TC
+Luồng nghiệp vụ
+Các bước chính
+Kết quả mong đợi
+ST01
+Đăng nhập hệ thống
+Nhập tài khoản hợp lệ và nhấn đăng nhập
+Vào đúng màn hình theo vai trò
+ST02
+Tạo doanh nghiệp
+Nhập thông tin doanh nghiệp, tài khoản quản trị
+Doanh nghiệp được lưu và hiển thị
+ST03
+Tạo chi nhánh
+Chọn doanh nghiệp, nhập thông tin chi nhánh
+Chi nhánh thuộc đúng doanh nghiệp
+ST04
+Nhập kho hàng hóa
+Nhập mã hàng, tuổi vàng, trọng lượng, số lượng
+Kho ghi nhận sản phẩm mới
+ST05
+Cập nhật bảng giá
+Nhập giá mua và bán cho từng loại vàng
+Bảng giá lưu thành công
+ST06
+Bán hàng
+Chọn khách, quét mã hàng, thanh toán
+Phiếu bán sinh ra và tồn kho giảm
+ST07
+Mua hàng
+Nhập thông tin vàng khách bán lại
+Phiếu mua sinh ra và sổ quỹ ghi nhận chi
+ST08
+Báo cáo doanh thu
+Mở báo cáo sau khi có giao dịch
+Doanh thu và số phiếu cập nhật
+ST09
+Phân quyền
+Đăng nhập bằng tài khoản nhân viên kho
+Không thấy chức năng quản trị doanh nghiệp
+ST10
+Tìm kiếm dữ liệu
+Tìm khách hàng, hàng hóa, hóa đơn
+Kết quả lọc đúng từ khóa
+Bộ test case chi tiết theo từng màn hình chức năng
+Để phần thiết kế kiểm thử rõ ràng hơn, nhóm xây dựng thêm bộ test case chi tiết cho từng màn hình chức năng chính. Mỗi test case nêu rõ tiền điều kiện, dữ liệu đầu vào, bước thực hiện và kết quả mong đợi. Các test case này có thể được sử dụng trực tiếp khi thực thi kiểm thử thủ công hoặc chuyển đổi thành kịch bản kiểm thử tự động.
+Bảng 3.7: Bảng testcase tri tiết
+Mã TC
+Màn hình
+Tiền điều kiện
+Dữ liệu / bước thực hiện
+Kết quả mong đợi
+DN01
+Quản lý doanh nghiệp
+Đăng nhập bằng tài khoản quản trị hệ thống
+Nhập tên doanh nghiệp, mã số thuế, địa chỉ, tài khoản quản trị doanh nghiệp
+Doanh nghiệp được tạo mới và hiển thị trong danh sách
+DN02
+Quản lý doanh nghiệp
+Đã tồn tại doanh nghiệp có cùng mã số thuế
+Tạo doanh nghiệp mới với mã số thuế trùng
+Hệ thống từ chối lưu và thông báo trùng mã số thuế
+DN03
+Quản lý doanh nghiệp
+Doanh nghiệp đang hoạt động
+Chuyển trạng thái doanh nghiệp sang ngừng hoạt động
+Người dùng thuộc doanh nghiệp đó không thể đăng nhập nghiệp vụ
+CN01
+Quản lý chi nhánh
+Doanh nghiệp đã được tạo
+Thêm chi nhánh với tên, địa chỉ, số điện thoại, người quản lý
+Chi nhánh được lưu và gắn đúng doanh nghiệp
+CN02
+Quản lý chi nhánh
+Chi nhánh có nhân viên đang hoạt động
+Xóa chi nhánh
+Hệ thống không cho xóa cứng, chỉ cho đổi trạng thái
+KHO01
+Quản lý kho
+Có danh mục hàng hóa
+Nhập số lượng tồn cho một mã hàng
+Số lượng tồn được cập nhật đúng
+KHO02
+Quản lý kho
+Số lượng tồn bằng 3
+Mở màn hình kho
+Hệ thống hiển thị trạng thái cảnh báo sắp hết
+HH01
+Quản lý hàng hóa
+Người dùng có quyền quản lý hàng hóa
+Tạo sản phẩm với tuổi vàng, trọng lượng, tiền công hợp lệ
+Sản phẩm được lưu và sinh mã hàng
+HH02
+Quản lý hàng hóa
+Không có bảng giá vàng cho tuổi vàng tương ứng
+Tạo sản phẩm mới
+Hệ thống cảnh báo thiếu bảng giá liên quan
+NV01
+Nhân viên và phân quyền
+Tài khoản quản lý đã đăng nhập
+Tạo nhân viên mới và gán vai trò bán hàng
+Nhân viên đăng nhập được và chỉ thấy chức năng bán hàng
+NV02
+Nhân viên và phân quyền
+Nhân viên đang có vai trò bán hàng
+Gán thêm quyền quản lý kho
+Menu kho xuất hiện sau khi quyền được cập nhật
+GV01
+Bảng giá vàng
+Người dùng có quyền quản lý giá
+Cập nhật giá mua và giá bán cho vàng 24K
+Bảng giá được lưu với thời gian cập nhật mới
+GV02
+Bảng giá vàng
+Giá bán nhỏ hơn giá mua
+Nhấn lưu bảng giá
+Hệ thống từ chối lưu vì dữ liệu không hợp lệ
+BH01
+Giao dịch bán hàng
+Sản phẩm còn tồn kho
+Chọn khách hàng, quét mã hàng, thanh toán tiền mặt
+Phiếu bán được tạo, tồn kho giảm, sổ quỹ ghi nhận thu
+BH02
+Giao dịch bán hàng
+Sản phẩm đã hết tồn
+Quét mã hàng để bán
+Hệ thống không cho thanh toán và hiển thị cảnh báo tồn kho
+MH01
+Giao dịch mua hàng
+Khách hàng bán lại vàng
+Nhập thông tin vàng, trọng lượng, giá mua vào
+Phiếu mua được tạo và sổ quỹ ghi nhận chi
+MH02
+Giao dịch mua hàng
+Trọng lượng nhập bằng 0
+Nhấn hoàn tất mua hàng
+Hệ thống yêu cầu nhập trọng lượng hợp lệ
+BC01
+Báo cáo thống kê
+Có giao dịch trong ngày
+Mở báo cáo doanh thu ngày
+Báo cáo hiển thị tổng doanh thu, số phiếu và vàng lưu chuyển
+BC02
+Báo cáo thống kê
+Có nhiều chi nhánh
+Lọc báo cáo theo chi nhánh
+Số liệu chỉ tính trong chi nhánh được chọn
+Tiêu chí đánh giá Pass Fail
+Một test case được đánh giá Pass khi kết quả thực tế trùng khớp với kết quả mong đợi, dữ liệu được lưu đúng trong hệ thống và không phát sinh lỗi giao diện hoặc lỗi nghiệp vụ phụ. Test case được đánh giá Fail khi chức năng không thực hiện được, dữ liệu sai lệch, thông báo lỗi không đúng hoặc hệ thống cho phép thao tác trái với điều kiện nghiệp vụ.
+Bảng 3.8: Bảng tiêu chí đánh giá
+Trạng thái
+Điều kiện đánh giá
+Cách ghi nhận
+Pass
+Kết quả thực tế đúng với kết quả mong đợi
+Ghi nhận đạt và lưu minh chứng nếu cần
+Fail
+Sai kết quả, sai dữ liệu, lỗi hệ thống hoặc thiếu kiểm soát nghiệp vụ
+Ghi nhận lỗi, bước tái hiện, mức độ nghiêm trọng
+Blocked
+Không thể thực hiện do thiếu dữ liệu hoặc phụ thuộc module khác
+Ghi rõ nguyên nhân bị chặn
+Retest
+Test case đã từng Fail và cần chạy lại sau khi sửa lỗi
+Ghi nhận kết quả chạy lại
+CHƯƠNG 4: THỰC THI TEST VÀ BÁO CÁO KẾT QUẢ TEST
+Quy trình thực thi kiểm thử
+Quy trình thực thi gồm bốn bước. Bước thứ nhất là chuẩn bị dữ liệu kiểm thử và môi trường chạy ứng dụng. Bước thứ hai là thực hiện test case theo đúng kịch bản đã thiết kế. Bước thứ ba là so sánh kết quả thực tế với kết quả mong đợi. Bước cuối cùng là ghi nhận trạng thái đạt, không đạt hoặc cần kiểm tra lại dưới đây là tổng hợp cơ bản với các testcase.
+Bảng 4.9: Bảng quy trình thực thi
+Bước
+Nội dung thực hiện
+Kết quả đầu ra
+1
+Chuẩn bị môi trường, tài khoản, dữ liệu mẫu
+Hệ thống sẵn sàng kiểm thử
+2
+Thực hiện test case theo từng module
+Kết quả thực tế của từng test case
+3
+So sánh với kết quả mong đợi
+Trạng thái Pass hoặc Fail
+4
+Ghi nhận lỗi và mức độ nghiêm trọng
+Danh sách lỗi và đề xuất xử lý
+Tổng hợp kết quả kiểm thử
+Bảng 4.10: Bảng tổng hợp kết quả
+Mức kiểm thử
+Tổng TC
+Đạt
+Không đạt
+Tỷ lệ đạt
+Unit Test
+10
+09
+01
+90%
+Integration Test
+10
+08
+02
+80%
+System Test
+10
+08
+02
+80%
+Tổng cộng
+30
+25
+05
+83.3%
+Kết quả Unit Test
+Bảng 4.11: Bảng kết quả uni test
+Mã TC
+Nội dung
+Kết quả
+Ghi chú
+UT01
+Kiểm tra username rỗng
+Đạt
+Hiển thị thông báo nhập thiếu
+UT02
+Kiểm tra password rỗng
+Đạt
+Hiển thị thông báo nhập thiếu
+UT03
+Sinh token đăng nhập
+Đạt
+Token được lưu sau khi đăng nhập
+UT04
+Tính vàng ròng
+Đạt
+Kết quả đúng theo công thức
+UT05
+Cảnh báo tồn kho thấp
+Không đạt
+Một trường hợp chưa đổi trạng thái ngay
+UT06
+Kiểm tra giá vàng
+Đạt
+Không cho lưu giá bất hợp lệ
+UT07
+Tính tiền bán
+Đạt
+Tổng tiền đúng
+UT08
+Tính tiền mua
+Đạt
+Số tiền chi đúng
+UT09
+Kiểm tra quyền truy cập
+Đạt
+Chặn đúng quyền
+UT10
+Tổng hợp báo cáo
+Đạt
+Tổng số liệu đúng
+Kết quả Integration Test
+Bảng 4.12: Bảng kết quả Integration Test
+Mã TC
+Module
+Kết quả
+Ghi chú
+IT01
+Đăng nhập - Phân quyền
+Đạt
+Menu theo vai trò đúng
+IT02
+Doanh nghiệp - Chi nhánh
+Đạt
+Chi nhánh gắn đúng doanh nghiệp
+IT03
+Hàng hóa - Kho
+Không đạt
+Cảnh báo tồn kho cần cập nhật lại
+IT04
+Bảng giá - Bán hàng
+Đạt
+Áp dụng đúng giá mới
+IT05
+Bán hàng - Kho
+Đạt
+Tồn kho giảm đúng
+IT06
+Mua hàng - Kho
+Đạt
+Tồn kho tăng đúng
+IT07
+Giao dịch - Sổ quỹ
+Đạt
+Phiếu thu chi được ghi nhận
+IT08
+Giao dịch - Báo cáo
+Đạt
+Báo cáo cập nhật đúng
+IT09
+Nhân viên - Vai trò
+Không đạt
+Cần tải lại phiên để cập nhật quyền
+IT10
+Kho - In tem
+Đạt
+Tem hiển thị đúng dữ liệu
+Kết quả System Test
+Kết quả System Test cho thấy hệ thống vận hành ổn định ở các luồng nghiệp vụ chính. Một số lỗi được ghi nhận chủ yếu liên quan đến cập nhật trạng thái tức thời và trải nghiệm người dùng, không làm sai lệch nghiêm trọng dữ liệu giao dịch.
+Bảng 4.13: Bảng kết quả System Test
+Luồng kiểm thử
+Kết quả
+Nhận xét
+Đăng nhập và phân quyền
+Đạt
+Điều hướng đúng theo vai trò
+Quản lý doanh nghiệp
+Đạt
+Tạo và hiển thị dữ liệu đúng
+Quản lý chi nhánh
+Đạt
+Dữ liệu chi nhánh liên kết đúng doanh nghiệp
+Quản lý kho
+Đạt một phần
+Cần cải thiện cảnh báo tồn kho
+Quản lý hàng hóa
+Đạt
+Thông tin sản phẩm được lưu đúng
+Giao dịch bán hàng
+Đạt
+Phiếu bán và tồn kho cập nhật đúng
+Giao dịch mua hàng
+Đạt
+Phiếu mua và sổ quỹ cập nhật đúng
+Báo cáo thống kê
+Đạt một phần
+Cần bổ sung bộ lọc chi nhánh
+Danh sách lỗi ghi nhận
+Bảng 4.14: Bảng danh sách lỗi ghi nhận khi test
+Mã lỗi
+Mô tả lỗi
+Mức độ
+Trạng thái
+Đề xuất
+BUG01
+Cảnh báo tồn kho thấp chưa cập nhật ngay sau khi thay đổi số lượng
+Trung bình
+Đã ghi nhận
+Cập nhật lại trạng thái sau mỗi thao tác kho
+BUG02
+Quyền mới của nhân viên chỉ có hiệu lực sau khi đăng nhập lại
+Trung bình
+Đã ghi nhận
+Làm mới token hoặc tải lại quyền sau khi cập nhật
+BUG03
+Báo cáo chưa lọc được theo chi nhánh
+Trung bình
+Đề xuất
+Bổ sung bộ lọc chi nhánh và khoảng thời gian
+BUG04
+Thông báo đăng nhập sai còn chung chung
+Thấp
+Đề xuất
+Hiển thị thông báo dễ hiểu hơn cho người dùng
+BUG05
+Màn hình giao dịch chưa cảnh báo rõ khi tồn kho không đủ
+Cao
+Cần sửa
+Kiểm tra tồn trước khi cho thanh toán
+Nhật ký thực thi kiểm thử mẫu
+Bảng dưới đây mô phỏng nhật ký thực thi một số test case tiêu biểu. Nhật ký này giúp theo dõi người thực hiện, thời điểm thực hiện, kết quả và ghi chú xử lý lỗi.
+Bảng 4.15: Bảng nhật ký thực thi test
+Ngày chạy
+Mã TC
+Người test
+Kết quả
+Ghi chú
+03/10/2026
+DN01
+Nhóm 04
+Pass
+Doanh nghiệp tạo thành công
+03/10/2026
+DN02
+Nhóm 04
+Pass
+Thông báo trùng mã số thuế đúng
+03/10/2026
+KHO02
+Nhóm 04
+Fail
+Chưa cập nhật cảnh báo ngay sau khi sửa số lượng
+03/10/2026
+GV02
+Nhóm 04
+Pass
+Không cho lưu giá bán thấp hơn giá mua
+03/10/2026
+BH01
+Nhóm 04
+Pass
+Tồn kho giảm sau khi bán
+03/10/2026
+BH02
+Nhóm 04
+Fail
+Thông báo tồn kho chưa đủ rõ ràng
+03/10/2026
+MH01
+Nhóm 04
+Pass
+Phiếu mua và phiếu chi được tạo
+03/10/2026
+BC02
+Nhóm 04
+Fail
+Chưa có bộ lọc chi nhánh
+Phân tích lỗi theo mức độ nghiêm trọng
+Bảng 4.16: Bảng phân tích mục độ nghiêm trọng
+Mức độ
+Số lỗi
+Ảnh hưởng
+Hướng xử lý
+Cao
+01
+Có thể làm sai nghiệp vụ giao dịch hoặc tồn kho
+Ưu tiên sửa trước khi nghiệm thu
+Trung bình
+03
+Ảnh hưởng đến độ chính xác hoặc trải nghiệm quản lý
+Sửa trong vòng kiểm thử tiếp theo
+Thấp
+01
+Không ảnh hưởng trực tiếp đến dữ liệu chính
+Cải thiện giao diện và thông báo
+Lỗi nghiêm trọng nhất được ghi nhận là trường hợp hệ thống chưa chặn rõ ràng khi bán sản phẩm không đủ tồn kho. Nếu lỗi này xảy ra trong môi trường thực tế, cửa hàng có thể lập phiếu bán vượt số lượng hàng đang có, gây sai lệch tồn kho và ảnh hưởng đến đối soát cuối ngày. Vì vậy lỗi này cần được ưu tiên xử lý trước các lỗi về hiển thị thông báo hoặc bộ lọc báo cáo.
+CHƯƠNG 5: AUTOMATION TEST
+Mục tiêu tự động hóa
+Rút ngắn thời gian kiểm thử hồi quy sau khi hệ thống thay đổi.
+Giảm sai sót khi thực hiện lại các bước kiểm thử lặp đi lặp lại.
+Kiểm tra nhanh các API và hàm xử lý nghiệp vụ quan trọng.
+Tạo cơ sở để tích hợp kiểm thử vào quy trình phát triển sau này.
+Công cụ sử dụng
+Bảng 5.17: Bảng công nghệ sử dụng
+Công cụ
+Mục đích
+Lý do lựa chọn
+JUnit
+Kiểm thử đơn vị backend
+Phù hợp với Java, hỗ trợ assertion rõ ràng
+Postman
+Kiểm thử API
+Dễ tạo request, kiểm tra response và lưu collection
+Selenium
+Tự động hóa giao diện
+Mô phỏng thao tác người dùng trên trình duyệt
+JMeter
+Kiểm thử hiệu năng cơ bản
+Mô phỏng nhiều request đồng thời
+GitHub Actions hoặc CI tương đương
+Chạy test tự động khi thay đổi mã nguồn
+Hỗ trợ kiểm thử hồi quy liên tục
+Kịch bản Automation Test
+Bảng 5.18: Bảng kịch bản Automation Test
+Mã AT
+Kịch bản
+Loại kiểm thử
+Trạng thái
+AT01
+Đăng nhập thành công bằng tài khoản hợp lệ
+UI/API
+Đạt
+AT02
+Đăng nhập thất bại khi sai mật khẩu
+API
+Đạt
+AT03
+Tạo doanh nghiệp mới và kiểm tra dữ liệu trả về
+API
+Đạt
+AT04
+Cập nhật bảng giá vàng và lấy lại giá mới
+API
+Đạt
+AT05
+Thêm hàng hóa vào kho và kiểm tra số lượng tồn
+API
+Đạt
+AT06
+Lập phiếu bán hàng bằng dữ liệu mẫu
+UI/API
+Đạt một phần
+AT07
+Lập phiếu mua hàng và kiểm tra sổ quỹ
+API
+Đạt
+AT08
+Kiểm tra báo cáo doanh thu sau khi phát sinh giao dịch
+API
+Đạt
+So sánh kiểm thử thủ công và tự động
+Bảng 5.19: Bảng so sánh kiểm thử thủ công và tự động
+Tiêu chí
+Manual Test
+Automation Test
+Tốc độ thực hiện
+Phụ thuộc người kiểm thử, chậm khi số lượng TC lớn
+Nhanh khi kịch bản đã được xây dựng
+Tính linh hoạt
+Dễ quan sát và khám phá lỗi mới
+Phù hợp với kịch bản ổn định
+Chi phí ban đầu
+Thấp
+Cao hơn do cần viết và bảo trì script
+Kiểm thử hồi quy
+Tốn thời gian
+Hiệu quả, có thể chạy nhiều lần
+Đánh giá giao diện
+Tốt hơn vì có quan sát trực quan
+Chỉ kiểm tra được theo điều kiện đã lập trình
+Kết quả và nhận xét
+Các kịch bản Automation Test giúp phát hiện nhanh lỗi trong API đăng nhập, cập nhật bảng giá, thêm hàng hóa và ghi nhận giao dịch. Tuy nhiên, việc tự động hóa chưa thay thế hoàn toàn kiểm thử thủ công, đặc biệt đối với các màn hình có nhiều thay đổi về giao diện hoặc cần đánh giá trải nghiệm người dùng.
+Nhóm nhận thấy nên ưu tiên tự động hóa các kịch bản ổn định như đăng nhập, kiểm tra quyền, tính toán giao dịch và báo cáo tổng hợp. Các kịch bản liên quan đến bố cục giao diện, thao tác nghiệp vụ mới hoặc trường hợp ngoại lệ phức tạp vẫn cần được kiểm thử thủ công kết hợp.
+Cấu trúc kịch bản kiểm thử tự động
+Một kịch bản kiểm thử tự động được tổ chức theo ba phần: chuẩn bị dữ liệu, thực hiện hành động và kiểm tra kết quả. Cách tổ chức này giúp test script dễ đọc, dễ bảo trì và có thể tái sử dụng dữ liệu kiểm thử.
+Bảng 5.20: Bảng cấu trúc kịch bản kiểm thử tự động
+Thành phần
+Nội dung
+Ví dụ
+Arrange
+Chuẩn bị dữ liệu, tài khoản, trạng thái ban đầu
+Tạo sản phẩm mẫu có tồn kho bằng 10
+Act
+Thực hiện hành động cần kiểm thử
+Gửi request lập phiếu bán 1 sản phẩm
+Assert
+Kiểm tra kết quả thực tế
+Mã phản hồi thành công, tồn kho còn 9
+Cleanup
+Dọn dữ liệu sau kiểm thử nếu cần
+Xóa phiếu test hoặc đánh dấu dữ liệu test
+Ví dụ kịch bản kiểm thử API
+Ví dụ đối với API đăng nhập, kịch bản tự động gửi username và password hợp lệ đến endpoint đăng nhập. Sau đó script kiểm tra mã phản hồi, kiểm tra access token có tồn tại và gọi tiếp API lấy thông tin người dùng để xác minh token có hiệu lực.
+Bảng 5.21: Bảng kịch bản kiểm thử API
+Bước
+Hành động
+Kết quả cần kiểm tra
+1
+Gửi POST /auth/login với tài khoản hợp lệ
+HTTP status 200
+2
+Đọc accessToken trong response
+Token không rỗng
+3
+Gửi GET /auth/me kèm token
+Trả về đúng username và vai trò
+4
+Gửi GET /auth/me không kèm token
+HTTP status 401 hoặc thông báo chưa xác thực
+Kế hoạch chạy kiểm thử hồi quy
+Bảng 5.22: Bảng kế hoạch chạy kiểm thử hồi quy
+Thời điểm chạy
+Nhóm test cần chạy
+Mục đích
+Sau khi sửa lỗi đăng nhập
+AT01, AT02, AT03
+Đảm bảo xác thực và phân quyền không bị ảnh hưởng
+Sau khi thay đổi bảng giá
+AT04, BH01, MH01
+Đảm bảo giao dịch dùng đúng giá mới
+Sau khi sửa kho
+KHO01, KHO02, IT03, ST04
+Đảm bảo tồn kho và cảnh báo hoạt động đúng
+Trước khi nộp báo cáo
+Toàn bộ test case mức System Test
+Đánh giá tổng thể hệ thống
+Rủi ro khi áp dụng Automation Test
+Automation Test có thể tạo cảm giác hệ thống đã được kiểm thử đầy đủ, nhưng thực tế script chỉ kiểm tra những điều kiện đã được lập trình trước. Nếu yêu cầu nghiệp vụ thay đổi mà test script không được cập nhật, kết quả kiểm thử tự động có thể vẫn Pass trong khi phần mềm không còn phù hợp yêu cầu mới. Vì vậy, kiểm thử tự động cần được bảo trì cùng với mã nguồn và tài liệu yêu cầu.
+CHƯƠNG 6: KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN
+Kết quả đạt được
+Đề tài đã hoàn thành việc phân tích bài toán kiểm thử phần mềm quản lý hàng trang sức, xác định các chức năng nghiệp vụ chính và xây dựng bộ test case tương ứng. Báo cáo trình bày đầy đủ từ cơ sở lý thuyết, phân tích yêu cầu, thiết kế test case, thực thi kiểm thử, báo cáo kết quả đến định hướng automation test.
+Về mặt nghiệp vụ, nhóm đã bao phủ các màn hình quan trọng gồm quản lý doanh nghiệp, quản lý chi nhánh, quản lý kho, quản lý hàng hóa, quản lý nhân viên và phân quyền, quản lý bảng giá vàng, giao dịch bán hàng, giao dịch mua hàng, báo cáo và thống kê. Đây là những chức năng cốt lõi quyết định tính đúng đắn của hệ thống.
+Hạn chế
+Dữ liệu kiểm thử chủ yếu là dữ liệu mẫu, chưa phản ánh hết toàn bộ tình huống thực tế tại cửa hàng vàng.
+Một số chức năng nâng cao như đồng bộ giá vàng theo thời gian thực và báo cáo theo nhiều chi nhánh chưa được kiểm thử sâu.
+Automation Test mới dừng ở các kịch bản cơ bản, chưa bao phủ toàn bộ giao diện và luồng nghiệp vụ.
+Kiểm thử hiệu năng mới ở mức định hướng, chưa có dữ liệu đo tải lớn trong thời gian dài.
+Hướng phát triển
+Trong tương lai, hệ thống kiểm thử có thể được mở rộng theo hướng xây dựng bộ dữ liệu lớn hơn, bổ sung test case cho các tình huống ngoại lệ và tự động hóa thêm các luồng nghiệp vụ quan trọng. Bên cạnh đó, cần tích hợp kiểm thử tự động vào quy trình phát triển để mỗi thay đổi mã nguồn đều được kiểm tra hồi quy.
+Ngoài kiểm thử chức năng, nhóm đề xuất bổ sung kiểm thử bảo mật, kiểm thử hiệu năng và kiểm thử khả năng phục hồi dữ liệu. Đây là các hướng quan trọng vì phần mềm quản lý vàng bạc, trang sức xử lý dữ liệu có giá trị cao, liên quan đến tiền, hàng hóa, khách hàng và quyền truy cập của nhiều nhóm người dùng.
+Kết luận
+Thông qua đề tài, nhóm đã vận dụng kiến thức của học phần Kiểm thử phần mềm vào một bài toán thực tế. Quá trình thực hiện giúp nhóm hiểu rõ hơn vai trò của kiểm thử trong việc bảo đảm chất lượng phần mềm, đặc biệt đối với các hệ thống nghiệp vụ có yêu cầu cao về độ chính xác và an toàn dữ liệu.
+Kết quả báo cáo cho thấy kiểm thử không chỉ là bước tìm lỗi sau khi lập trình mà là một hoạt động xuyên suốt, hỗ trợ phân tích yêu cầu, đánh giá thiết kế, kiểm tra xử lý nghiệp vụ và nâng cao độ tin cậy của hệ thống trước khi triển khai.
+Bài học kinh nghiệm
+Qua quá trình thực hiện đề tài, nhóm nhận thấy việc hiểu đúng nghiệp vụ là điều kiện quan trọng trước khi thiết kế test case. Nếu chỉ nhìn vào giao diện mà không nắm rõ quy trình kinh doanh vàng bạc, người kiểm thử dễ bỏ sót các tình huống quan trọng như giá vàng thay đổi, tồn kho theo chi nhánh, phân quyền theo vai trò hoặc đối soát sổ quỹ cuối ngày.
+Nhóm cũng nhận thấy test case cần được viết đủ rõ để người khác có thể thực hiện lại. Một test case tốt không chỉ có tên chức năng mà cần có tiền điều kiện, dữ liệu đầu vào, các bước thao tác, kết quả mong đợi và tiêu chí đánh giá. Điều này giúp quá trình kiểm thử có tính lặp lại và dễ xác định nguyên nhân khi phát hiện lỗi.
+Đề xuất hoàn thiện hệ thống
+Bảng 6.23: Bảng đề xuất hoàn thiện hệ thống
+Nội dung đề xuất
+Lý do
+Mức ưu tiên
+Bổ sung kiểm tra tồn kho trước khi thanh toán
+Tránh lập phiếu bán vượt số lượng thực tế
+Cao
+Thêm bộ lọc báo cáo theo chi nhánh và thời gian
+Hỗ trợ quản lý theo dõi hoạt động từng cửa hàng
+Cao
+Làm mới quyền người dùng sau khi cập nhật vai trò
+Tránh phải đăng nhập lại khi thay đổi quyền
+Trung bình
+Chuẩn hóa thông báo lỗi
+Giúp người dùng hiểu nguyên nhân và cách xử lý
+Trung bình
+Tăng số lượng kịch bản automation test
+Hỗ trợ kiểm thử hồi quy nhanh hơn
+Trung bình
+PHỤ LỤC
+1. Mã nguồn dự án
+Toàn bộ mã nguồn của hệ thống quản lý vàng bạc được lưu trữ trên GitHub nhằm phục vụ quá trình phát triển, quản lý phiên bản và theo dõi các thay đổi của dự án.
+Liên kết mã nguồn: https://github.com/hungnguyen1325/gold-management-software
+Kho mã nguồn bao gồm các thành phần phục vụ xây dựng hệ thống, cấu trúc chương trình và các phiên bản cập nhật trong quá trình phát triển.
+2. Tài liệu Test Case
+Danh sách Test Case của hệ thống được lưu trữ trên Google Sheets để thuận tiện cho việc xây dựng, cập nhật và theo dõi kết quả kiểm thử.
+Liên kết file Test Case: Nhom 4_ Bao cao testcase.xlsx - Google Trang tính
+Tài liệu Test Case được sử dụng để lưu các trường hợp kiểm thử, dữ liệu đầu vào, các bước thực hiện, kết quả mong đợi và kết quả thực tế trong quá trình kiểm thử hệ thống.
+TÀI LIỆU THAM KHẢO
+[1] Myers, G. J., Sandler, C., & Badgett, T. (2012). The Art of Software Testing (3rd ed.). Hoboken, New Jersey: John Wiley & Sons. Wiley Online Library
+[2] Ammann, P., & Offutt, J. (2016). Introduction to Software Testing (2nd ed.). Cambridge: Cambridge University Press. Cambridge
+[3] Jorgensen, P. C. (2013). Software Testing: A Craftsman’s Approach (4th ed.). Boca Raton: Auerbach Publications, CRC Press. Routledge
+[4] Pressman, R. S., & Maxim, B. R. (2020). Software Engineering: A Practitioner’s Approach (9th ed.). New York: McGraw-Hill Education. McGraw Hill Education
+[5] International Software Testing Qualifications Board – ISTQB (2024). Certified Tester Foundation Level Syllabus v4.0.1, truy cập ngày 03/10/2026. Tài liệu trình bày các khái niệm nền tảng về kiểm thử, mức độ kiểm thử, kỹ thuật Black-box, White-box và công cụ kiểm thử. ISTQB ISTQB Certified Tester Foundation Level v4.0
+[6] JUnit Team. JUnit 5 User Guide, truy cập ngày 03/10/2026. Tài liệu hướng dẫn xây dựng và thực thi Unit Test trên nền tảng Java. JUnit User Guide JUnit 5 User Guide
+[7] Postman. Test API functionality and performance in Postman, truy cập ngày 03/10/2026. Tài liệu hướng dẫn kiểm thử API, Integration Testing, End-to-End Testing, Regression Testing và Performance Testing bằng Postman. Postman Docs Postman API Testing Documentation
+[8] Selenium Project. Selenium WebDriver Documentation, truy cập ngày 03/10/2026. Tài liệu hướng dẫn tự động hóa thao tác trên trình duyệt phục vụ Automation Testing. Selenium Selenium WebDriver Documentation
+[9] Apache Software Foundation. Apache JMeter User’s Manual, truy cập ngày 03/10/2026. Tài liệu hướng dẫn xây dựng Test Plan, thực hiện kiểm thử tải và phân tích kết quả kiểm thử hiệu năng. Apache JMeter Apache JMeter User Manual
